@@ -1,0 +1,184 @@
+/* ========================================================================= */
+/* Rounding corners...
+http://stackoverflow.com/questions/10166961/rounding-corners-on-the-background
+*/
+/* ========================================================================= */
+body {
+    border-radius: 10px; /* future proofing */
+    border: 0px;
+    /*background:#BEC3C6 url(../img/bg.jpg) repeat-x;*/
+    background: white;
+    padding: 30px 0px 0px 0px;
+    width:960px; /* should match "max-wdith" in .container (should learn sass in the future)... */
+    /*height: 600px;  optional */
+    margin: 0 auto;
+    /*background: #fff url(path to non-tiled image) no-repeat center scroll;  optional*/ 
+    /*http://www.webdeveloper.com/forum/showthread.php?250519-Background-Color-outside-body-margin*/
+}
+
+.tak-header {
+  margin-left:  30px;
+  margin-right: 40px;  
+}
+
+.tak-main-body {
+  /*padding: -10px 15px;*/
+  padding: 0 20px 0 0px;
+  text-align: justify;
+  margin-left:  35px;
+  margin-right: 35px;  
+  position: relative; top:-25px;
+}
+
+.tak-footer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #777;
+    padding-top:10px;
+    padding-bottom:40px;
+    border-top: 1px solid #ccc;
+    margin-top: 0px;
+    margin-bottom:0px;
+    position:relative;
+    top:25px;
+}
+
+
+html { 
+    padding: 40px 0px 60px 0px;
+    background:#BEC3C6 url(../img/bg.jpg) repeat-x;
+}
+
+/*div#background{
+ background:white;
+}*/
+
+/*ul.social{
+    margin: 0px -10px 0px 0px;
+    padding: 0px -10px 0px 0px;
+}*/
+
+ul.social li{
+    float: left;
+    margin-left: -0px;
+    margin-right: -0px;
+}
+ul.my-social li{
+    float: right;
+/*    position:relative;
+    top:-50px;*/
+    margin-left: -0px;
+    margin-right: -0px;
+    display: inline;
+}
+/*ul.social li:first-child {
+	margin-left: 0;
+}
+*/
+ul.social li{
+    position: relative;
+    top: -10px;
+    display: inline;
+}
+
+.nav>li>a{
+    padding: 10px;
+}
+
+
+
+/* ========================================================================== */
+/*              Thing i added  (10/25/2014)                                   */
+/* ========================================================================== */
+@media (min-width: 600px) {
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+div.navbar.navbar-inverse.navbar-top{
+  border-radius: 10px;
+}
+
+ul.nav.navbar-nav{
+    font-size: 18px;
+}
+
+@media (min-width: 300px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+}
+
+mark {
+  color: #000;
+  background: yellow;
+}
+
+.my-contact-info{
+  margin: 0pt;
+  margin-left:-20px;
+  list-style-type: none;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 980px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+div.header{
+    margin-left: 5px;
+}
+
+.my-proj-name{
+    position: relative;
+    top:50px;
+}
+
+div.header{
+    position:relative;
+    top:-40px;
+}
+
+/* Default font size: (h1,h2,h3,h4,h5,h6)=(36,30,24,18,14,12) */
+h1{font-size: 30px;}
+h2{font-size: 22px;}
+h3{font-size: 18px;}
+h4{font-size: 16px;}
+h5{font-size: 12px;}
+h6{font-size: 10px;}

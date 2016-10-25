@@ -1,0 +1,17 @@
+
+Current date/time: {{ current_time | datetimefilter }}
+
+{#     <ul>
+    {% for href, caption in [('index.html', 'Index'), ('about.html', 'About'),
+                             ('downloads.html', 'Downloads')] %}
+        <li><a href="{{ href }}">{{ caption }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <dl>
+    {% for key, value in my_dict.iteritems() %}
+        <dt>{{ key|e }}</dt>
+        <dd>{{ value|e }}</dd>
+    {% endfor %}
+    </dl>
+     #}

@@ -1,0 +1,41 @@
+<div class="tak-header">      
+    {# social media icon locations #}
+    {% set icon_size = 'height=30' %}
+    {% set img_github   = url_for('static', filename='img/social-media-icon/GitHub-Mark-120px-plus.png') %}
+    {% set img_linkedin = url_for('static', filename='img/social-media-icon/linkedin.png') %}
+    {% set img_gscholar = url_for('static', filename='img/social-media-icon/google-scholar.jpg') %}
+    {% set img_email    = url_for('static', filename='img/social-media-icon/email.png') %}
+    <div class="header" style="margin-top:35px">
+        <ul class="nav navbar-right social pull-right ">
+            <li><a href="http://scholar.google.com/citations?hl=en&user=tGMrt6sAAAAJ" target="_blank" >
+                    <img title="Google Scholar" src="{{ img_gscholar }}" {{ icon_size }} />
+            </a></li>                        
+
+            <li><a href="http://www.linkedin.com/pub/takanori-watanabe/9b/588/355" target="_blank" >
+                    <img title="Linkedin" src="{{ img_linkedin }}" {{ icon_size }} />
+            </a></li>
+
+            <li><a href="https://github.com/wtak23" target="_blank" >
+                    <img title="Github" src="{{ img_github }}" {{ icon_size }} />
+            </a></li>
+
+            <li><a href="mailto:takanori[at]umich.edu" target="_top" >
+                    <img title="Email" src="{{ img_email }}" {{ icon_size }} />
+            </a></li>
+        </ul>              
+        <h3 class="text-muted" style="font-size:200%">Takanori Watanabe (渡辺貴則) </h3>
+    </div>
+
+    <div class="navbar navbar-inverse navbar-top" role="navigation" style="position:relatve; top:-45px;">
+        <div class="container">
+            <ul class="nav navbar-nav" id="tak-nav-bar">
+                <li class="home"><a href="./">Home</a></li>
+                <!--<li class="about"><a href="about.html">About</a></li>-->
+                <li class="research"><a href="research.html">Research</a></li>
+                <li class="courses"><a href="courses.html">Courses</a></li>
+                <li class="resources"><a href="resources.html">Resources</a></li>
+                <!--<li class="contact"><a href="contact.html">Contact Info</a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
