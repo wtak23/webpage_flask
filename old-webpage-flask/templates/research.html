@@ -1,4 +1,4 @@
-{% from "macros.html" import mypdf with context %}.
+{% from "macros.html" import mypdf with context %}
 {% extends "layout.html" %}
 {% block body %}
 <script>
@@ -41,7 +41,7 @@
     <li>Scalable Machine Learning Methods for Massive Biomedical Data Analysis 
         {# [<a href="static/pdf/thesis-final.pdf" >pdf</a>] #}
         [<a href={{ pdf_file('thesis-final.pdf') }} >pdf</a>]
-        <!-- [<a href="thesis-draft.pdf" >pdf</a>] -->
+        {# <!-- [<a href="thesis-draft.pdf" >pdf</a>] --> #}
     </li>
 </ul>
 <h2>Publications</h2>
@@ -91,7 +91,7 @@
         ``<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31340-0_13">Spatial
             Confidence Regions for Quantifying and Visualizing Registration Uncertainty</a>," 
         <em>Biomedical Image Registration</em>, vol. 7359, pp. 120-130, 2012.  
-        [<a href="static/pdf/wbir2012.pdf">Author preprint (.pdf)</a>]
+        [<a href={{ pdf_file("wbir2012.pdf")}}>Author preprint (.pdf)</a>]
     </li>                
 </ul>
 
@@ -107,7 +107,7 @@
 <h2>Research Notes</h2>
 Some snapshots of my <a href= {{ pdf_file("notes/notes-2014.pdf") }} >research notes</a> 
 to give an idea of the way I think, and the typical <a href={{ pdf_file("notes/FL-OCP1-Linearized-ADMM.pdf") }} >ideation process</a> in my research.
-adf
+
 <h3>Other old notes:</h3>
 <ul>
     <li>brainstorming...
