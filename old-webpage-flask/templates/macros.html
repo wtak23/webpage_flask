@@ -1,2 +1,7 @@
 {# https://tedboy.github.io/jinja2/templ11.html#macros #}
 {# https://realpython.com/blog/python/primer-on-jinja-templating/#macros #}
+
+{%- macro mypdf(filename, text) -%}
+{# simple wrapper to make my pdf-insertion in the template concise #}
+<a href="{{ pdf_file(filename) }}">{{text}}</a>
+{%- endmacro -%}

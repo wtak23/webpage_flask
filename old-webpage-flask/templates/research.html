@@ -1,3 +1,4 @@
+{% from "macros.html" import mypdf with context %}.
 {% extends "layout.html" %}
 {% block body %}
 <script>
@@ -38,7 +39,8 @@
 <h2>PhD Dissertation (University of Michigan &ndash; Ann Arbor, 2015)</h2>
 <ul>
     <li>Scalable Machine Learning Methods for Massive Biomedical Data Analysis 
-        [<a href="static/pdf/thesis-final.pdf" >pdf</a>]
+        {# [<a href="static/pdf/thesis-final.pdf" >pdf</a>] #}
+        [<a href={{ pdf_file('thesis-final.pdf') }} >pdf</a>]
         <!-- [<a href="thesis-draft.pdf" >pdf</a>] -->
     </li>
 </ul>
@@ -56,7 +58,9 @@
         ``<a href="http://stmi2014.ece.cornell.edu/program.html">Multisite 
             Disease Classification with Functional Connectomes via Multitask Structured Sparse SVM</a>,''
         <a href="http://stmi2014.ece.cornell.edu/"><em>Sparsity Techniques in Medical Imaging (STMI)</em></a>, 
-        Boston, USA, 2014. [<a href="static/pdf/stmi2014.pdf">Author preprint (.pdf)</a>]
+        Boston, USA, 2014. 
+        {#- [<a href="static/pdf/stmi2014.pdf">Author preprint (.pdf)</a>] -#}
+        [<a href={{ pdf_file('stmi2014.pdf') }}>Author preprint (.pdf)</a>]
     </li>
     <li>
         <b>T. Watanabe</b>, D. Kessler,  C. Scott, M. Angstadt, C. Sripada, 
@@ -101,17 +105,23 @@
 </ul>
 
 <h2>Research Notes</h2>
-Some snapshots of my <a href="static/notes/notes-2014.pdf" >research notes</a> 
-to give an idea of the way I think, and the typical <a href="static/notes/FL-OCP1-Linearized-ADMM.pdf" >ideation process</a> in my research.
-
+Some snapshots of my <a href= {{ pdf_file("notes/notes-2014.pdf") }} >research notes</a> 
+to give an idea of the way I think, and the typical <a href={{ pdf_file("notes/FL-OCP1-Linearized-ADMM.pdf") }} >ideation process</a> in my research.
+adf
 <h3>Other old notes:</h3>
 <ul>
-    <li>brainstorming... [<a href="static/notes/old-notes.pdf">pdf</a>]</li>
+    <li>brainstorming...
+     [<a href= {{ pdf_file("notes/old-notes.pdf") }}>pdf</a>]</li>
     <li>Notes prepared for Machine Learning Reading Group 
-    [<a href="static/notes/ml-meeting-nov2015.pdf">pdf1</a>,
+    {# {{mypdf(filename="notes/ml-meeting-nov2015.pdf", text="pdf1")}}, #}
+    [<a href = {{ pdf_file("notes/ml-meeting-nov2015.pdf") }}>pdf1</a>,
+    <a href = {{ pdf_file("notes/smlrg-jain.pdf") }}>pdf2</a>,
+    <a href = {{ pdf_file("notes/smlrg-loh.pdf") }}>pdf3</a>,
+    <a href = {{ pdf_file("notes/smlrg-rnca.pdf") }}>pdf4</a>]
+     {# <a href="static/notes/ml-meeting-nov2015.pdf">pdf1</a>,
      <a href="static/notes/smlrg-jain.pdf">pdf2</a>,
      <a href="static/notes/smlrg-loh.pdf">pdf3</a>,
-     <a href="static/notes/smlrg-rnca.pdf">pdf4</a>]
+     <a href="static/notes/smlrg-rnca.pdf">pdf4</a> #}
      </li>
     <li>(more to come...)</li>
 </ul>

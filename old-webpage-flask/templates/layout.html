@@ -38,7 +38,8 @@
         
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
         <script src={{ url_for('static', filename='js/bootstrap.min.js') }}></script>
-        {% if google_analytics %}
+        {# http://stackoverflow.com/questions/7104198/flask-accessing-the-config-variable-in-the-template #}
+        {%- if config['GOOGLE_ANALYTICS'] -%}
             <script>
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -48,7 +49,7 @@
                 ga('create', 'UA-55756816-1', 'auto');
                 ga('send', 'pageview');
             </script> 
-        {% endif %}
+        {%- endif %}
         </div> {# container div #}
     </body>
 </html>
