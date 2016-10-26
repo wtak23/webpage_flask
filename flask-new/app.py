@@ -12,6 +12,28 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config['GOOGLE_ANALYTICS']=True
 
+@app.context_processor
+def add_context_urlsite():
+    """ Create context for function pointing to large binary files.
+
+    I don't want Frozen-flask to keep copying large binary files to the 
+    ``build`` directory, so decided to commit all my bulky files 
+    once-and-for-all in my base github account.
+
+    The function ``file_url`` can be used in any template files.
+
+    See flask.pocoo.org/docs/0.11/templating/#context-processors
+
+    Example
+    -------
+    <a href={{ file_url('pdf/stmi2014.pdf') }}>Author preprint (.pdf)</a>
+
+    Above renders to
+    <a href=http://takwatanabe.me/pdf/stmi2014.pdf>Author preprint (.pdf)</a>
+    """
+    def file_url(filename):
+        return "http://takwatanabe.me/"+filename
+    return dict(file_url=file_url)
 
 
 @app.route("/")
@@ -27,6 +49,10 @@ def generic():
 def research():
     return render_template('research.html',title="Research")
 
+@app.route("/plotly.html")
+def plotly():
+    return render_template('plotly.html',title="Plotly-demo")
+
 @app.route("/courses.html")
 def courses():
     return render_template('courses.html',title="Courses")
@@ -41,4 +67,4 @@ def elements():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8001)
+    app.run(host='localhost', port= 8005)

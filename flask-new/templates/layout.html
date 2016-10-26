@@ -15,6 +15,9 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+        {#- ===== jquery must come before bootstrap.js ===== -#}
+        {#- http://stackoverflow.com/questions/22658015/bootstrap-wont-detect-jquery-1-11-0-uncaught-error-bootstraps-javascript-re -#}
+        <script src="static/js/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -32,7 +35,28 @@
 
             <!-- Header -->
             <header id="header">
-                {%- include 'util/header.html' %}
+                <div class="inner">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <!-- <span class="symbol"><img src="static/images/logo.svg" alt="" /></span><span class="title">Phantom</span> -->
+                        <!-- <span><img src="static/images/UPenn_logo.svg" alt="" width="200" /></span> -->
+                        <!-- <span><img src="static/images/penn_logo.gif" alt="" height="50" /></span> -->
+                        {# <span><img src="static/img/penn_logo_cropped.png" alt="" height="30" /></span> #}
+                        {# <span><img src="static/img/penn_logo_noname.gif" alt="" height="30" /></span> #}
+                        {# <span>Takanori Watanabe</span> #}
+                        {# <span><img src="static/img/pennmed_logo.jpg" alt="" style="width:90%; max-width:250px;" /></span> #}
+                        <span style="text-transform: none; font-size: 45px; font-weight: 700; letter-spacing:0em;">Takanori Watanabe (渡辺貴則)</span>
+                        {# <span><img src="static/img/perelman_logo.gif" alt="" style="width:90%; max-width:350px;" /></span> #}
+                        <!-- <span class="title">Takanori Watanabe</span> -->
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
             <!-- Menu -->
@@ -65,7 +89,10 @@
         <!-- end wrapper -->
 
         <!-- Scripts -->
-        {%- include 'scripts.html' -%}
+        <script src="static/js/skel.min.js"></script>
+        <script src="static/js/util.js"></script>
+        <!--[if lte IE 8]><script src="static/js/ie/respond.min.js"></script><![endif]-->
+        <script src="static/js/main.js"></script>
 
     </body>
 </html>
