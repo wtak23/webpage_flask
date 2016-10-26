@@ -20,7 +20,7 @@
         border: 0;
         border-radius: 100%;
         display: inline-block;
-        font-size: 1.25em;
+        font-size: 1.5em;
         height: 2.25em;
         left: 0;
         line-height: 2.25em;
@@ -32,17 +32,28 @@
 
     .iconai.circle:hover {
         /* the amount the icon "jumps" up at hover */
-        top: -0.5em; 
+        top: -0.3em; 
     }
 
     /* ==== define individual icons here ==== /*
     /* google-scholar icon */
     .iconai.circle.ai-google-scholar {
-        background: #70aecd;
+        /*background: #5151F8;*/
+        background: rgba(55,55,255,0.7);
+        /*background: #da83ae;*/
+        /*background: #a862a9;*/
+        color: #fff;
+
+    }    /* mendeley icon */
+    .iconai.circle.ai-mendeley {
+        /*background: #5151F8;*/
+        /*background: rgba(55,55,255,0.7);*/
+        background: #db6b67;
+        /*background: #a862a9;*/
         color: #fff;
     }
 
-    .iconai.circle.ai-google-scholar:hover {
+    /*.iconai.circle.ai-google-scholar:hover {
         background: #7fb7d2;
-    }
+    }*/
 
