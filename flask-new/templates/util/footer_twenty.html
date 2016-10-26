@@ -1,0 +1,88 @@
+{# This makes part of the layout.html base template #}
+{# Brought this from twenty-template #}
+<style type = "text/css" media = "all">
+    /*===== footer =====*/
+    #footer {
+        background: #f6f6f6;
+        /*color: #7c8081;*/
+        /*padding: 5em 5em 10em 5em;*/
+        /*http://stackoverflow.com/questions/18739937/how-to-keep-footer-at-bottom-of-screen*/
+        /*padding: -25em -25em -30em -25em;*/
+        /*height: 1px;*/
+        /*margin-top: -7em;*/
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 5px;
+    }
+
+    #footer .copyright {
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+
+    #footer .copyright a {
+        color: inherit;
+    }
+
+    #footer .copyright li {
+        display: inline-block;
+        margin-left: 1em;
+        padding-left: 1em;
+        border-left: dotted 1px;
+    }
+
+    #footer .copyright li:first-child {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    /*===== List =====*/
+    ul.featured-icons {
+        margin: 0;
+    }
+
+    ul.featured-icons li {
+        display: inline-block;
+        float: none;
+        width: auto;
+    }
+
+    ul.featured-icons li .icon {
+        font-size: 4em;
+        width: 1.25em;
+    }
+
+    ul.buttons li {
+        display: block;
+        padding: 1em 0 0 0;
+    }
+
+    /*===== Icon =====*/
+    {%- include 'util/footer_twenty_icon_fa.css' %}
+    {%- include 'util/footer_twenty_icon_ai.css' %}
+
+</style>
+
+{# testing icon functionality
+<i class="fa fa-dribbble"></i>
+<i class="ai ai-google-scholar"></i>
+<i class="ai ai-google-scholar-square ai-2x"></i>
+#}
+
+{% set gscholar_url =  "https://scholar.google.com/citations?hl=en&user=tGMrt6sAAAAJ" %}
+{% set github_url   =  "https://scholar.google.com/citations?hl=en&user=tGMrt6sAAAAJ" %}
+
+                    <ul class="icons">
+                        {# <li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li> #}
+                        <li><a href="#" class="icon circle fa-facebook"></a></li>
+                        <li><a href="#" class="icon circle fa-google-plus"></a></li>
+                        <li><a href="#" class="icon circle fa-github"></a></li>
+                        {# <li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li> #}
+                        <li><a href={{gscholar_url}} class="iconai circle ai-google-scholar" title="Google Scholar"></a></li>
+                    </ul>
+
+                    <ul class="copyright">
+                        <li>&copy; Takanori Watanabe 2016</li>
+                    </ul>
+

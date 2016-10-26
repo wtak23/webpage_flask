@@ -1,0 +1,88 @@
+{# icon for font-awesome  #}
+.icon {
+        text-decoration: none;
+        position: relative;
+    }
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none !important;
+    }
+
+    .icon.circle {
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        border: 0;
+        border-radius: 100%;
+        display: inline-block;
+        font-size: 1.25em;
+        height: 2.25em;
+        left: 0;
+        line-height: 2.25em;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        width: 2.25em;
+    }
+
+    .icon.circle:hover {
+        /* the amount the icon "jumps" up at hover */
+        top: -0.5em; 
+    }
+
+    /* ==== define individual icons here ==== /*
+        /* twitter icon */
+        .icon.circle.fa-twitter {
+            background: #70aecd;
+            color: #fff;
+        }
+
+        .icon.circle.fa-twitter:hover {
+            background: #7fb7d2;
+        }
+
+        /* facebook icon */
+        .icon.circle.fa-facebook {
+            background: #7490c3;
+            color: #fff;
+        }
+
+        .icon.circle.fa-facebook:hover {
+            background: #829bc9;
+        }
+
+        /* google plus icon*/
+        .icon.circle.fa-google-plus {
+            background: #db6b67;
+            color: #fff;
+        }
+
+        .icon.circle.fa-google-plus:hover {
+            background: #df7b77;
+        }
+
+        /* github icon */
+        .icon.circle.fa-github {
+            background: #dcad8b;
+            color: #fff;
+        }
+
+        .icon.circle.fa-github:hover {
+            background: #e1b89b;
+        }
+
+        /* dribble icon */
+        .icon.circle.fa-dribbble {
+            background: #da83ae;
+            color: #fff;
+        }
+
+        .icon.circle.fa-dribbble:hover {
+            background: #df93b8;
+        }
+

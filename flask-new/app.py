@@ -1,17 +1,23 @@
+# -*- coding: utf-8 -*-
+
 from flask import Flask
 from flask import jsonify, render_template, request, url_for
+
 app = Flask(__name__)
 
+#*****************************************************************************#
+# Setup relevant *config* parameters for flask app
+# https://tedboy.github.io/flask/flask_doc.config.html
+#*****************************************************************************#
 app.config['DEBUG'] = True
+app.config['GOOGLE_ANALYTICS']=True
 
-
-options = dict(google_analytics = False)
 
 
 @app.route("/")
 @app.route("/index.html")
 def index():
-    return render_template('index.html',title="Welcome to Tak's homepage")
+    return render_template('index.html',title=u"Takanori Watanabe (渡辺貴則)")
 
 @app.route("/generic.html")
 def generic():
@@ -35,4 +41,4 @@ def elements():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8000)
+    app.run(host='localhost', port= 8001)

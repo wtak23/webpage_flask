@@ -1,0 +1,48 @@
+{# icon for academicons https://jpswalsh.github.io/academicons/ #}
+.iconai {
+        text-decoration: none;
+        position: relative;
+    }
+    .iconai:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: Academicons;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none !important;
+    }
+
+    .iconai.circle {
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        border: 0;
+        border-radius: 100%;
+        display: inline-block;
+        font-size: 1.25em;
+        height: 2.25em;
+        left: 0;
+        line-height: 2.25em;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        width: 2.25em;
+    }
+
+    .iconai.circle:hover {
+        /* the amount the icon "jumps" up at hover */
+        top: -0.5em; 
+    }
+
+    /* ==== define individual icons here ==== /*
+    /* google-scholar icon */
+    .iconai.circle.ai-google-scholar {
+        background: #70aecd;
+        color: #fff;
+    }
+
+    .iconai.circle.ai-google-scholar:hover {
+        background: #7fb7d2;
+    }
+
