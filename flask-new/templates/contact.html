@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{%- block body -%}
+        <h1>{{title}}</h1>
+        <strong>Email address:</strong> wtak[at]mail.med.upenn.edu<br/>
+        <strong>Phone:</strong> (734) 615-7027<br/>
+        <strong>Address</strong>: 3700 Hamilton Walk, Richards Building (7th floor), Philadelphia, PA 19104<br/>
+
+        <br>
+        {% include "util/google_map_richards.html" %}
+{%- endblock body -%}        

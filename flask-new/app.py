@@ -49,9 +49,17 @@ def generic():
 def research():
     return render_template('research.html',title="Research")
 
-@app.route("/plotly.html")
-def plotly():
-    return render_template('plotly.html',title="Plotly-demo")
+@app.route("/contact.html")
+def contact():
+    return render_template('contact.html',title="Contact Information")
+
+@app.route("/plotly1.html")
+def plotly1():
+    return render_template('/_tests_/plotly1.html',title="Plotly-demo1")
+
+@app.route("/plotly2.html")
+def plotly2():
+    return render_template('/_tests_/plotly2.html',title="Plotly-demo2")
 
 @app.route("/courses.html")
 def courses():
@@ -65,10 +73,5 @@ def resources():
 def elements():
     return render_template('elements.html',title="Elements")
 
-@app.route("/google_map.html")
-def google_map():
-    return render_template('google_map.html')
-
-
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8006)
+    app.run(host='localhost', port= 8013)

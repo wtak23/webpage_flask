@@ -22,7 +22,7 @@
             University of Pennsylvania.
             My research focuses on designing new machine learning and large-scale optimization algorithms, 
             particularly for studying patterns in large and complicated biomedical datasets.
-            For additional information about my research, please visit my <a href="research.php">research page</a> 
+            For additional information about my research, please visit my <a href="research.html">research page</a> 
             and <a href="https://github.com/wtak23" >Github page</a>.
         </p>
 
@@ -35,17 +35,54 @@
            I successfully defended my PhD on December, 2014.
         </p>
 
-        {#- ===== had some trouble center the iamge....needed to change"margin" and "display" property ===== -#}
+        {#- ===== had some trouble center the image....needed to change"margin" and "display" property ===== -#}
         {# http://stackoverflow.com/questions/7055393/center-image-using-text-align-center #}
         {# http://www.w3schools.com/css/css_align.asp #}
         {# <span class="image main"><img src={{file_url('img/schiz_brain.png')}} alt="" /></span> #}
         <img src={{file_url('img/schiz_brain.png')}} style="width:90%; max-width:650px; margin: 0 auto; display: block; padding-bottom:20px" alt="" />
 
-        </br>
         <h2>Contact Information</h2>
         <strong>Email address:</strong> wtak[at]mail.med.upenn.edu<br/>
         <strong>Phone:</strong> (734) 615-7027<br/>
-        <strong>Address</strong>: 3700 Hamilton Walk, Richards Building (7th floor), Philadelphia, PA 19104<br/>
+        <strong>Address</strong>: 3700 Hamilton Walk, Richards Building (7th floor), Philadelphia, PA 19104<br>
 
-        {% include "util/google_map_richards.html" %}
+        {# <i class="fa fa-envelope-o"></i>&nbsp;&nbsp;wtak[at]mail.med.upenn.edu #}
+        <br/>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-envelope-o"></i>wtak[at]mail.med.upenn.edu</li>
+          <li><i class="fa-li fa fa-phone"></i>(734) 615-7027</li>
+          <li><i class="fa-li fa fa-home"></i>3700 Hamilton Walk<br/>Richards Building (7th floor)</br>Philadelphia, PA 19104</li>
+        </ul>
+
+
+        <br>{% include "util/google_map_richards.html" %}<br>
+
+
+
+
+        <h2>Personal (jumbled) Coding Notes</h2>
+        <ul>
+            <li>
+                [<a href="https://wtak23.github.io/snippets/" >Snippet notebook</a>]
+                [<a href="https://wtak23.github.io/coding_notes/" >Coding notebook</a>]
+                [<a href="https://wtak23.github.io/configs/" >Computer-config notebook</a>]
+            </li>
+            <li>Personal <a href="https://wtak23.github.io/pyspark/" >PySpark API</a> I created since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
+        </ul>
+
+        <h2>Teaching &ndash; Graduate Student Instructor (University of Michigan)</h2>
+        <ul>
+            <li>
+                <b>Fall 2011</b> &ndash; Machine Learning (Graduate level course &ndash; 
+                <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs545f11/index.html" >course link</a>)
+            </li>
+            <li>
+                <b>Fall 2014</b> &ndash; Machine Learning (Graduate level course &ndash; 
+                <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs545f14/index.html" >course link</a>)
+            </li>
+            <li>
+                <b>Winter 2015</b> &ndash; Discrete Mathematics
+                (<a href="https://www.eecs.umich.edu/eecs/academics/courses/eecs-203.html" >topics covered</a>)
+            </li>
+        </ul>
 {%- endblock body -%}
