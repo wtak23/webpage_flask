@@ -2746,19 +2746,23 @@
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #7bd0c1;
+				/*background-color: #7bd0c1;*/
+				background-color: rgba(123,208,193,0.7);
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9b;
+				/*background-color: #c75b9b;*/
+				background-color: rgba(199,91,155,0.7);
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #ae85ca;
+				/*background-color: #ae85ca;*/
+				background-color: rgba(174,133,202,0.7);
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #8499e7;
+				/*background-color: #8499e7;*/
+				background-color: rgba(132,153,231,0.7);
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
