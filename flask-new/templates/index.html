@@ -68,8 +68,19 @@
             </div>
             <br/>
 
-
-        <h2>Personal (jumbled) Coding Notes</h2>
+        <h2>Personal Coding Notes</h2>
+        <ul>
+            {% for url, name in [('snippets','Snippets notebook'),
+                                 ('coding_notes','Coding notebook'),
+                                 ('configs','Computer configuration notebook') ] %}
+                <li>
+                    <a href="https://wtak23.github.io/{{url}}/" >{{name}}</a>
+                    [<a href="https://github.com/wtak23/{{url}}">Github source code</a>]
+                </li>
+            {% endfor %}
+            <li>Personal <a href="https://wtak23.github.io/pyspark/" >PySpark API</a> I created since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
+        </ul>
+        {# <h2>Personal (jumbled) Coding Notes</h2>
         <ul>
             <li>
                 [<a href="https://wtak23.github.io/snippets/" >Snippet notebook</a>]
@@ -77,7 +88,7 @@
                 [<a href="https://wtak23.github.io/configs/" >Computer-config notebook</a>]
             </li>
             <li>Personal <a href="https://wtak23.github.io/pyspark/" >PySpark API</a> I created since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
-        </ul>
+        </ul> #}
 
         <h2>Graduate Student Instructor (University of Michigan)</h2>
         <ul>

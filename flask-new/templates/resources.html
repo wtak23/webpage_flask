@@ -42,9 +42,25 @@
 
     <h2>Personal Coding Notes</h2>
     <ul>
-        <li><a href="https://wtak23.github.io/snippets/" >Snippets notebook</a></li>
-        <li><a href="https://wtak23.github.io/coding_notes/" >Coding notebook</a></li>
-        <li><a href="https://wtak23.github.io/configs/" >Computer configuration notebook</a></li>
+        {% for url, name in [('snippets','Snippets notebook'),
+                             ('coding_notes','Coding notebook'),
+                             ('configs','Computer configuration notebook') ] %}
+            <li>
+                <a href="https://wtak23.github.io/{{url}}/" >{{name}}</a>
+                [<a href="https://github.com/wtak23/{{url}}">Github source code</a>]
+            </li>
+        {% endfor %}
         <li>Personal <a href="https://wtak23.github.io/pyspark/" >PySpark API</a> I created since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
     </ul>
+
+    <h2>Interactive Charts with Plotly</h2>
+    <p>
+    I am a huge fan of creating interactive visualization charts using <a href="https://plot.ly/">Plotly</a>. 
+
+    <br/>
+    Here are some examples:
+    {% for item in [1,2,3] %}
+        [<a href="plotly{{item}}.html">Plotly-demo{{item}}</a>] &nbsp;
+    {% endfor %}
+    </p>
 {%- endblock body -%}
