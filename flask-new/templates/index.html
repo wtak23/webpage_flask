@@ -74,12 +74,19 @@
                                  ('coding_notes','Coding notebook'),
                                  ('configs','Computer configuration notebook') ] %}
                 <li>
-                    <a href="https://wtak23.github.io/{{url}}/" >{{name}}</a>
+                    <strong>{{name}}</strong> (<a href="https://wtak23.github.io/{{url}}/" >link</a>)
                     [<a href="https://github.com/wtak23/{{url}}">Github source</a>]
                 </li>
             {% endfor %}
-            <li>Personal <a href="https://wtak23.github.io/pyspark/" >PySpark API</a> I created since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
+            <li><strong>Personal PySpark API</strong> (<a href="https://wtak23.github.io/pyspark/" >link</a>) &mdash; I created this since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
+            <li><strong>Interactive Charts with <a href="https://plot.ly/">Plotly</a></strong>
+                &mdash; some examples:
+                {% for item in [1,2,3] %}
+                    [<a href="plotly{{item}}.html">Plotly-demo{{item}}</a>] &nbsp;
+                {% endfor %}
+            </li>
         </ul>
+
         {# <h2>Personal (jumbled) Coding Notes</h2>
         <ul>
             <li>
