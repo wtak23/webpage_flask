@@ -1,3 +1,6 @@
 *.pdf
 mybuild
 *.pyc
+*.png
+*.jpg
+*.jpeg

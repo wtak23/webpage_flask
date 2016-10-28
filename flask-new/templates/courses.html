@@ -1,20 +1,64 @@
 {% extends "layout.html" %}
 {%- block body -%}
-                <h1>{{title}}</h1>
-                <span class="image main"><img src="static/images/pic13.jpg" alt="" /></span>
+  <h1>{{title}}</h1>
+  {# <span class="image main"><img src="static/img/course_notes2_crop.png" alt="" /></span> #}
 
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/72.embed?link=false&logo=false"></iframe>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/74.embed?link=false&logo=false"></iframe>
+  <span class="image main">
+  <figure>
+      <img src="static/img/umich_law_library.jpg" alt="" style="max-width:750px; margin: 0 auto; display: block;"/>
+      <figcaption >The Law Library at the University of Michigan &mdash; my favorite place to study.</figcaption>
+  </figure>
+  </span>
 
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/38.embed"></iframe>
-                <iframe width="800" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/42.embed"></iframe>
-                <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/50.embed?link=false&logo=false"></iframe>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/52.embed?link=false&logo=false"></iframe>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/54.embed?link=false&logo=false"></iframe>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/58.embed"></iframe>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/56.embed"></iframe>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/26.embed"></iframe>
+  <h2>Completed Graduate Coursework<br/>(University of Michigan &ndash; Ann Arbor)</h2>
+  <!-- To do: Replace this list with a table in the future  (10/30/2014 9:16:PM) -->
+  <ul style="list-style:none">
+      <li> EECS 501, &nbsp; Probability and Random Processes 
+          (<a href=http://takwatanabe.me/pdf/notes/501notes.pdf>notes</a>)</li>
+          <li> EECS 516, &nbsp; Medical Imaging Systems
+              (<a href="http://web.eecs.umich.edu/~fessler/course/516/index.html">course link</a>)</li>
+          <li> EECS 545, &nbsp; Machine Learning
+              (<a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs545f09/index.html">course link</a>)</li>            
+          <li> EECS 551, &nbsp; Mathematical Methods in Signal Processing 
+              (<a href=http://takwatanabe.me/pdf/notes/551notes.pdf>notes</a>, 
+              <a href="http://www.eecs.umich.edu/~cscott/past_courses/eecs551/index.html">course link</a>)</li>
+          <li> EECS 556, &nbsp; Image Processing
+              (<a href="http://web.eecs.umich.edu/~fessler/course/556/index.html">course link</a>)</li>   
+          <li> EECS 564, &nbsp; Estimation, Filtering and Detection
+              (<a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs564w09/index.html">course link</a>)</li>
+          <li> EECS 598, &nbsp; Statistical Learning Theory            
+              (<a href=http://takwatanabe.me/pdf/notes/598notes.pdf>notes</a>,
+               <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs598w14/index.html">course link</a>)</li>
+          <li> EECS 600, &nbsp; Function Space Methods for Systems Theory 
+              (<a href=http://takwatanabe.me/pdf/notes/600notes.pdf>notes</a>) (<em>not formally enrolled</em>)</br>
+          </li>    
+          <li> EECS 755, &nbsp; Advanced Topics in Image Reconstruction
+              (<a href="http://web.eecs.umich.edu/~fessler/course/755/index.html">course link</a>)</li>   
+          <li> BME 510, &nbsp;&nbsp;&nbsp; Medical Imaging Laboratory</li>
+          <li> Math 451, &nbsp;&nbsp; Advanced Calculus            
+              (<a href=http://takwatanabe.me/pdf/notes/451notes.pdf>notes</a>)
+          <li> Math 611, &nbsp;&nbsp; Convex Optimization
+              (<a href="http://www-personal.umich.edu/~mepelman/teaching/IOE611/index.html">course link</a>)</li>   
+          <li> STATS 610, Statistical Inference
+              (<a href=http://takwatanabe.me/pdf/notes/610notes.pdf>notes</a>)</li>     
+             <!-- <br/> -->
+
+  </ul>
+
+  <h2>Teaching &ndash; Graduate Student Instructor<br/>(University of Michigan)</h2>
+  <ul>
+      <li>
+          <b>Fall 2011</b> &ndash; Machine Learning (Graduate level course &ndash; 
+          <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs545f11/index.html" >course link</a>)
+      </li>
+      <li>
+          <b>Fall 2014</b> &ndash; Machine Learning (Graduate level course &ndash; 
+          <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs545f14/index.html" >course link</a>)
+      </li>
+      <li>
+          <b>Winter 2015</b> &ndash; Discrete Mathematics
+          (<a href="https://www.eecs.umich.edu/eecs/academics/courses/eecs-203.html" >topics covered</a>)
+      </li>
+  </ul>
+
 {%- endblock body -%}

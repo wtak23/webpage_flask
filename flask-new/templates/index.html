@@ -40,24 +40,33 @@
         {# http://www.w3schools.com/css/css_align.asp #}
         {# <span class="image main"><img src={{file_url('img/schiz_brain.png')}} alt="" /></span> #}
         <img src={{file_url('img/schiz_brain.png')}} style="width:90%; max-width:650px; margin: 0 auto; display: block; padding-bottom:20px" alt="" />
-
-        <h2>Contact Information</h2>
-        <strong>Email address:</strong> wtak[at]mail.med.upenn.edu<br/>
-        <strong>Phone:</strong> (734) 615-7027<br/>
-        <strong>Address</strong>: 3700 Hamilton Walk, Richards Building (7th floor), Philadelphia, PA 19104<br>
-
-        {# <i class="fa fa-envelope-o"></i>&nbsp;&nbsp;wtak[at]mail.med.upenn.edu #}
         <br/>
-        <ul class="fa-ul">
-          <li><i class="fa-li fa fa-envelope-o"></i>wtak[at]mail.med.upenn.edu</li>
-          <li><i class="fa-li fa fa-phone"></i>(734) 615-7027</li>
-          <li><i class="fa-li fa fa-home"></i>3700 Hamilton Walk<br/>Richards Building (7th floor)</br>Philadelphia, PA 19104</li>
-        </ul>
 
 
-        <br>{% include "util/google_map_richards.html" %}<br>
 
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                    <h2>Contact Information</h2>
+                    {# <strong>Email address:</strong> wtak[at]mail.med.upenn.edu<br/>
+                    <strong>Phone:</strong> (734) 615-7027<br/>
+                    <strong>Address</strong>: 3700 Hamilton Walk, Richards Building (7th floor), Philadelphia, PA 19104<br> #}
 
+                    {# <i class="fa fa-envelope-o"></i>&nbsp;&nbsp;wtak[at]mail.med.upenn.edu #}
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa fa-home"></i>{# <strong>Address</strong><br/> #}
+                        3700 Hamilton Walk<br/>Richards Building (7th floor)</br>Philadelphia, PA 19104</li>
+                      <li><i class="fa-li fa fa-envelope-o"></i>wtak[at]mail.med.upenn.edu</li>
+                      <li><i class="fa-li fa fa-phone"></i>(734) 615-7027</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-8">
+                    {% include "util/google_map_richards.html" %}
+                </div>
+              </div>
+            </div>
+            <br/>
 
 
         <h2>Personal (jumbled) Coding Notes</h2>
@@ -70,7 +79,7 @@
             <li>Personal <a href="https://wtak23.github.io/pyspark/" >PySpark API</a> I created since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
         </ul>
 
-        <h2>Teaching &ndash; Graduate Student Instructor (University of Michigan)</h2>
+        <h2>Graduate Student Instructor (University of Michigan)</h2>
         <ul>
             <li>
                 <b>Fall 2011</b> &ndash; Machine Learning (Graduate level course &ndash; 

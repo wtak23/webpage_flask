@@ -61,6 +61,10 @@ def plotly1():
 def plotly2():
     return render_template('/_tests_/plotly2.html',title="Plotly-demo2")
 
+@app.route("/plotly3.html")
+def plotly3():
+    return render_template('/_tests_/plotly2.html',title="Plotly-demo3")
+
 @app.route("/courses.html")
 def courses():
     return render_template('courses.html',title="Courses")
@@ -74,4 +78,4 @@ def elements():
     return render_template('elements.html',title="Elements")
 
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8013)
+    app.run(host='localhost', port= 8019)

@@ -1,0 +1,16 @@
+/* ======================= Change I (tw) included ========================== /*
+/* ===== Change I (tw) included ===== /*
+/* tw: vertical alignment in icon listing is screwed up...apply this fix */
+/*https://github.com/FortAwesome/Font-Awesome/issues/2288*/
+.fa-li {
+    top: auto;
+    line-height: inherit;
+    /*vertical-align: middle;*/
+}
+
+figure figcaption {
+    /*border: 1px dotted blue;*/
+    text-align: center;
+    font-size: 125%;
+}
+/* ========================================================================= /*
