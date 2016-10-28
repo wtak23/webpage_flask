@@ -65,6 +65,10 @@ def resources():
 def elements():
     return render_template('elements.html',title="Elements")
 
+@app.route("/google_map.html")
+def google_map():
+    return render_template('google_map.html')
+
 
 if __name__ == '__main__':
     app.run(host='localhost', port= 8005)
