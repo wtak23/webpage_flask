@@ -1724,7 +1724,8 @@
 		margin: 0 0 0.5em 0;
 		/*text-transform: uppercase;*/
 		text-transform: none;
-		letter-spacing: 0.35em;
+		/*letter-spacing: 0.35em;*/
+		letter-spacing: 0.15em; /*tw*/
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {

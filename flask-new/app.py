@@ -71,4 +71,4 @@ def google_map():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8005)
+    app.run(host='localhost', port= 8006)
