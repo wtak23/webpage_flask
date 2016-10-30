@@ -17,8 +17,12 @@
 
         {#- ===== jquery must come before bootstrap.js ===== -#}
         {#- http://stackoverflow.com/questions/22658015/bootstrap-wont-detect-jquery-1-11-0-uncaught-error-bootstraps-javascript-re -#}
+        {#- http://stackoverflow.com/questions/13923297/bootstrap-javascript-or-popover-not-working -#}
         <script src="static/js/jquery.min.js"></script>
+        {# <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> #}
+
         <!-- Latest compiled and minified JavaScript -->
+        {# <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script> #}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         {# ===== css from html5 ===== #}
@@ -33,7 +37,7 @@
         <!--[if lte IE 9]><link rel="stylesheet" href="static/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="static/css/ie8.css" /><![endif]-->
 
-        <link rel="icon" href="static/img/favicon-penn.ico">
+        <link rel="icon" href={{file_url('img/favicon-penn.ico')}}>
     </head>
     <body>
         <!-- Wrapper -->
@@ -92,6 +96,10 @@
                 {# {%- include 'util/footer_phantom.html' %} #}
                 {%- include 'util/footer_twenty.html' %}
             </footer>
+
+            {%- if config['GOOGLE_ANALYTICS'] -%}
+                {%- include 'util/google_analytics.html' -%}
+            {%- endif -%}
         </div>
         <!-- end wrapper -->
 

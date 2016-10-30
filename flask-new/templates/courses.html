@@ -4,38 +4,150 @@
   {# <span class="image main"><img src="static/img/course_notes2_crop.png" alt="" /></span> #}
 
 
+  <script type="text/javascript">
+    // enable popover
+    // see http://getbootstrap.com/javascript/#popovers
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
 
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
   <h2>Completed Graduate Coursework<br/>(University of Michigan &ndash; Ann Arbor)</h2>
   <!-- To do: Replace this list with a table in the future  (10/30/2014 9:16:PM) -->
+
+  {# https://bootstrapbay.com/blog/bootstrap-button-styles/ #}
+  <style>
+    .mybutton {
+      /*height:5em;*/
+      font-size: 9px;
+      font-weight:bold;
+      padding: 0px 8px;
+      margin: 0px;
+      /*color:white;  <- not working...*/
+    }
+
+     .popover{ /* to control popup box size */
+        font-size: 14px;
+         /*width:800px;*/
+         max-width:500px;
+         /*max-width: 50%;*/
+         /*height:250px;    */
+     }
+
+     a.myhover{
+      /*background-color: yellow;*/
+      border-bottom: dotted 1px rgba(88, 88, 88, 0.0); /* remove underlying dots */
+     }
+  </style>
+
+
+  {#- ===== set course descriptions here ===== -#}
+  {# http://www.engin.umich.edu/college/academics/bulletin/courses/eecs#500levelcourses #}
+  {# https://www.eecs.umich.edu/eecs/academics/courses/eecs-545.html #}
+  {% set info501 = 'Introduction to probability and random processes. Topics include probability axioms, sigma algebras, random vectors, expectation, probability distributions and densities, Poisson and Wiener processes, stationary processes, autocorrelation, spectral density, effects of filtering, linear least-squares estimation and convergence of random sequences.' %}
+  {% set info516 = 'Principles of modern medical imaging systems. For each modality the basic physics is described, leading to a systems model of the imager. Fundamental similarities between the imaging equations of different modalities will be stressed. Modalities covered include radiography, x-ray computed tomography (CT), NMR imaging (MRI) and real-time ultra-sound.' %}
+  {% set info545 = "A graduate-level introduction of machine learning. Topics include supervised learning, unsupervised learning, learning theory, graphical models, and reinforcement learning. This course will also cover recent research topics such as sparsity and feature selection, Bayesian techniques, and deep learning. <br><br>  In addition to mathematical foundations, this course will also put an emphasis on practical applications of machine learning to artificial intelligence and data mining, such as computer vision, data mining, speech recognition, text processing, bioinformatics, and robot perception and control. The course will require an open-ended research project." | linebreaksbr %}
+  {% set info551 = "Theory and application of matrix methods to signal processing, data analysis and machine learning. Theoretical topics include subspaces, eigenvalue and singular value decomposition, projection theorem, constrained, regularized and unconstrained least squares techniques and iterative algorithms. Applications such as image deblurring, ranking of webpages, image segmentation and compression, social networks, circuit analysis, recommender systems and handwritten digit recognition." | linebreaksbr %}
+  {% set info556 = "Theory and application of digital image processing. Sampling, filtering, 2D Fourier transforms, interpolation, edge detection, enhancement, denoising, restoration, segmentation, random field models of images, Bayesian methods, wavelets and sparsity models. Applications include optical imaging, biomedical images, video and image compression." | linebreaksbr %}
+  {% set info564 = "Principles of estimation, linear filtering and detection. Estimation: linear and nonlinear minimum mean squared error estimation, and other strategies. Linear filtering: Wiener and Kalman filtering. Detection: simple, composite, binary and multiple hypotheses. Neyman-Pearson and Bayesian approaches." | linebreaksbr %}
+  {% set info598 = "Introduction to proofs for performance guarantees that quantify the ability of a machine learning algorithm to generalize from training data to unseen test data. Topics covered include concentration of measure, uniform deviation bounds, empirical and structural risk minimization, Rademacher complexity, Vapnik-Chervonenkis theory, consistency and rates of convergence, margin-based bounds, stability bounds, and application of these theories to learning algorithms such as decision trees, boosting, support vector machines, and kernel density estimators." | linebreaksbr %}
+
+
+  {#- ===== course urls ===== -#}
+  {% set url516 = 'http://web.eecs.umich.edu/~fessler/course/516/index.html' %}
+  {% set url545 = 'http://web.eecs.umich.edu/~cscott/past_courses/eecs545f09/index.html' %}
+  {% set url551 = 'http://www.eecs.umich.edu/~cscott/past_courses/eecs551/index.html' %}
+  {% set url556 = 'http://web.eecs.umich.edu/~fessler/course/556/index.html' %}
+  {% set url564 = 'http://web.eecs.umich.edu/~cscott/past_courses/eecs564w09/index.html' %}
+  {% set url598 = 'http://web.eecs.umich.edu/~cscott/past_courses/eecs598w14/index.html' %}
+  
+  {#- ===== define helper macros ===== -#}
+  {%- macro button(title,course_info='') -%}
+    {# {% set tagtype="a" %} #}
+    {% set tagtype="button" %}
+    {# http://getbootstrap.com/css/#buttons-options #}
+    <{{tagtype}} 
+        type="button" 
+        data-html="true" {# <- needed to enable html markup in "data" attribute to render http://stackoverflow.com/questions/19001766/add-line-break-to-tooltip-in-bootstrap-3 #}
+        {% if tagtype == "button" %}
+          class="btn btn-secondary mybutton" 
+        {% else %}
+          class="myhover" 
+        {% endif %}
+        data-toggle="popover" 
+        title="{{title}}" 
+        data-content="{{course_info}}" 
+        data-trigger="hover">
+        course info
+    </{{tagtype}}>  
+  {%- endmacro -%}
+
+  {%- macro course_info(title,course_info='') -%}
+    {% set tagtype="a" %}
+    {# {% set tagtype="button" %} #}
+    {# http://getbootstrap.com/css/#buttons-options #}
+    <{{tagtype}} 
+        type="button" 
+        data-html="true" {# <- needed to enable html markup in "data" attribute to render http://stackoverflow.com/questions/19001766/add-line-break-to-tooltip-in-bootstrap-3 #}
+        class="myhover" 
+        data-toggle="popover" 
+        title="{{title}}" 
+        data-placement="top"
+        data-content="{{course_info}}" 
+        data-trigger="hover">
+        {{title | safe}}
+    </{{tagtype}}>  
+  {%- endmacro -%}
+
+  {#- ===== list out courses ===== -#}
+  <i>(hover over course title for brief description about the course)</i>
   <ul style="list-style:none">
-      <li> EECS 501, &nbsp; Probability and Random Processes 
-          (<a href={{file_url('pdf/notes/501notes.pdf')}}>notes</a>)</li>
-          <li> EECS 516, &nbsp; Medical Imaging Systems
-              (<a href="http://web.eecs.umich.edu/~fessler/course/516/index.html">course link</a>)</li>
-          <li> EECS 545, &nbsp; Machine Learning
-              (<a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs545f09/index.html">course link</a>)</li>            
-          <li> EECS 551, &nbsp; Mathematical Methods in Signal Processing 
-              (<a href={{file_url('pdf/notes/551notes.pdf')}}>notes</a>, 
-              <a href="http://www.eecs.umich.edu/~cscott/past_courses/eecs551/index.html">course link</a>)</li>
-          <li> EECS 556, &nbsp; Image Processing
-              (<a href="http://web.eecs.umich.edu/~fessler/course/556/index.html">course link</a>)</li>   
-          <li> EECS 564, &nbsp; Estimation, Filtering and Detection
-              (<a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs564w09/index.html">course link</a>)</li>
-          <li> EECS 598, &nbsp; Statistical Learning Theory            
-              (<a href={{file_url('pdf/notes/598notes.pdf')}}>notes</a>,
-               <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs598w14/index.html">course link</a>)</li>
-          <li> EECS 600, &nbsp; Function Space Methods for Systems Theory 
-              (<a href={{file_url('pdf/notes/600notes.pdf')}}>notes</a>) (<em>not formally enrolled</em>)</br>
-          </li>    
-          <li> EECS 755, &nbsp; Advanced Topics in Image Reconstruction
-              (<a href="http://web.eecs.umich.edu/~fessler/course/755/index.html">course link</a>)</li>   
-          <li> BME 510, &nbsp;&nbsp;&nbsp; Medical Imaging Laboratory</li>
-          <li> Math 451, &nbsp;&nbsp; Advanced Calculus            
-              (<a href={{file_url('pdf/notes/451notes.pdf')}}>notes</a>)
-          <li> Math 611, &nbsp;&nbsp; Convex Optimization
-              (<a href="http://www-personal.umich.edu/~mepelman/teaching/IOE611/index.html">course link</a>)</li>   
-          <li> STATS 610, Statistical Inference
-              (<a href={{file_url('pdf/notes/610notes.pdf')}}>notes</a>)</li>     
+      <li> 
+        {{course_info("EECS 501 &mdash; Probability and Random Processes", info501)}}
+          ({{ ahref(file_url('pdf/notes/501.pdf'), 'notes')  }})
+          {# {{ button('EECS 501 &mdash; Probability and Random Processes ', info501) }} #}
+      </li>
+      <li> 
+          {{course_info("EECS 516 &mdash; Medical Imaging Systems", info516)}}
+          ({{ ahref(url516, 'course link') }})
+      </li>
+      <li> 
+          {{course_info("EECS 545 &mdash; Machine Learning", info545)}}
+          ({{ ahref(url545, 'course link') }})
+          {# {{ button('EECS 545 &mdash; Machine Learning', info545) }} #}
+      </li>         
+      <li> 
+          {{course_info("EECS 551 &mdash; Mathematical Methods in Signal Processing", info551)}}
+          ({{ ahref(file_url('pdf/notes/551.pdf'), 'notes')  }}, {{ ahref(url551, 'course link') }})
+          {# {{ button('EECS 551 &mdash; Mathematical Methods in Signal Processing', info551) }} #}
+      <li> 
+          {{course_info("EECS 556 &mdash; Image Processing", info556)}}
+          ({{ ahref(url556, 'course link') }}) 
+          {# {{ button('EECS 556', info556) }} #}
+      </li> 
+      <li> 
+          {{course_info("EECS 564 &mdash; Estimation, Filtering and Detection", info564)}}
+          ({{ ahref(url564, 'course link') }}) 
+      <li> 
+          {{course_info("EECS 598 &mdash; Statistical Learning Theory", info598)}}         
+          (<a href={{file_url('pdf/notes/598notes.pdf')}}>notes</a>,
+           <a href="http://web.eecs.umich.edu/~cscott/past_courses/eecs598w14/index.html">course link</a>)</li>
+      <li> EECS 600, &nbsp; Function Space Methods for Systems Theory 
+          (<a href={{file_url('pdf/notes/600notes.pdf')}}>notes</a>) (<em>not formally enrolled</em>)</br>
+      </li>    
+      <li> EECS 755, &nbsp; Advanced Topics in Image Reconstruction
+          (<a href="http://web.eecs.umich.edu/~fessler/course/755/index.html">course link</a>)</li>   
+      <li> BME 510, &nbsp;&nbsp;&nbsp; Medical Imaging Laboratory</li>
+      <li> Math 451, &nbsp;&nbsp; Advanced Calculus            
+          (<a href={{file_url('pdf/notes/451notes.pdf')}}>notes</a>)
+      <li> Math 611, &nbsp;&nbsp; Convex Optimization
+          (<a href="http://www-personal.umich.edu/~mepelman/teaching/IOE611/index.html">course link</a>)</li>   
+      <li> STATS 610, Statistical Inference
+          (<a href={{file_url('pdf/notes/610notes.pdf')}}>notes</a>)</li>
+        <span title="hoverin' words">hover me</span>     
              <!-- <br/> -->
 
   </ul>
