@@ -3056,7 +3056,7 @@
 				padding: 0;
 			}
 
-				#menu > .inner > ul > li {
+				/*#menu*/ > .inner > ul > li {
 					padding: 0;
 					border-top: solid 1px rgba(255, 255, 255, 0.15);
 				}

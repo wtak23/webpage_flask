@@ -3,8 +3,11 @@
      * element that contains the map. */
     #map {
       height: 350px;
-      width: 90%;        
+      width: 90%;
       /*height: 100%;*/
+    }    
+    #map_content {
+      font-size:12.5px;
     }
   </style>
 
@@ -13,9 +16,9 @@
 
     function initMap() {
       var loc_marker = {lat: 39.949700, lng: -75.197749};
-      var map_center = {lat: 39.94993,  lng: -75.196}; {# +lat => down, -lng => left (more negative) #}
+      var map_center = {lat: 39.95093,  lng: -75.1965}; {# +lat => down, -lng => left (more negative) #}
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 17,
+        zoom: 16,
         // center: loc_marker
         center: map_center
       });
@@ -27,7 +30,7 @@
           '3700 Hamilton Walk, Philadelphia, PA 19104'+
           '<br>'+
           // '3700 Hamilton Walk, Richards Building, Philadelphia, PA 19104<br>'+
-          'Richards Medical Research Laboratory Building'+
+          'Richards Medical Research Lab Building'+
           ' (<a href="https://en.wikipedia.org/wiki/Richards_Medical_Research_Laboratories">'+
           'wiki</a>)'+
           // '</p>'+
