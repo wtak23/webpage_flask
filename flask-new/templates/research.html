@@ -52,9 +52,9 @@
 
     {% set fontsize = "20px" %}
     <div class="row">
-        {% set height = "850px" %}
+        {% set height = "min-height:900px;" %}
         <div class="6u 12u(narrower)">
-            <section class="box special" style="height:{{height}};">
+            <section class="box special" style="{{height}}">
                 <span class="image featured"><img src={{file_url('img/research/snmf2.png')}} alt="" style="max-width: 100%;padding-bottom:30px; "/></span>
                 <h3>Discriminative Subnetwork Extraction using Supervised NMF</h3>
                 <hr>
@@ -74,7 +74,7 @@
             </section>
         </div>
         <div class="6u 12u(narrower)">
-            <section class="box special" style="height:{{height}};">
+            <section class="box special" style="{{height}}">
                 <span class="image featured"><img src={{file_url('img/research/pca_comp2.png')}} alt="" style="max-width: 105%;padding-bottom:0px; margin-left:-10px;"/></span>
                 <h3> Harmonization of inter-site Structural Connectivity Data</h3>
                 <hr>
@@ -84,9 +84,9 @@
         </div>
     </div>
     <div class="row">
-        {% set height = "800px" %}
+        {% set height = "min-height:1000px;" %}
         <div class="6u 12u(narrower)">
-            <section class="box special" style="height:{{height}};">
+            <section class="box special" style="{{height}}">
                 <span class="image featured"><img src={{file_url('img/corr_clin_scores.png')}} alt="" style="max-width: 108%;padding-bottom:40px; margin-left:-15px;"/></span>
                 <h3>Analysis of Gender Differences in Structural Connectivity</h3>
                 <hr>
@@ -95,7 +95,7 @@
             </section>
         </div>
         <div class="6u 12u(narrower)">
-            <section class="box special" style="height:{{height}};">
+            <section class="box special" style="{{height}}">
                 <span class="image featured"><img src={{file_url('img/research/brain_schiz.png')}} alt="" style="max-width: 100%;padding-bottom:20px; "/></span>
                 <h3>Disease Classification using resting-state-fMRI based Connectomes</h3>
                 <hr>
@@ -119,9 +119,9 @@
         </div>
     </div>
     <div class="row">
-        {% set height = "800px" %}
+        {% set height = "min-height:1000px;" %}
         <div class="6u 12u(narrower)">
-            <section class="box special" style="height:{{height}};">
+            <section class="box special" style="{{height}}">
                 <span class="image featured"><img src={{file_url('img/research/multitask.png')}} alt="" style="max-width: 100%;padding-bottom:20px; "/></span>
                 <h3>Multisite Disease Classification using Multitask Structured Sparse SVM</h3>
                 <hr>
@@ -140,7 +140,7 @@
             </section>
         </div>
         <div class="6u 12u(narrower)">
-            <section class="box special" style="height:{{height}};">
+            <section class="box special" style="{{height}}">
                 {# <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%;"/></span> #}
                 <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%; padding-bottom:7px;"/></span>
                 <h3 style="text-align: center;">Uncertainty Analysis for Biomedical Image Registration</h3>
