@@ -107,6 +107,14 @@ def generic():
 def research():
     return render_template('research.html',title="Research")
 
+@app.route("/research_draft.html")
+def research_draft():
+    return render_template('/research_draft.html',title="Research")
+
+@app.route("/research_original.html")
+def research_orig():
+    return render_template('/_tests_/research_orig.html',title="Research")
+
 @app.route("/contact.html")
 def contact():
     return render_template('contact.html',title="Contact Information")
@@ -135,5 +143,14 @@ def resources():
 def elements():
     return render_template('elements.html',title="Elements")
 
+#-----------------------------------------------------------------------------#
+# jsonify url
+#-----------------------------------------------------------------------------#
+# $.getJSON('/doworder', disp_charts);
+# @app.route('/json/course_<title>')
+# def json_course(title):
+#     items = dict(url='test',description=title)
+#     return jsonify(items=items) 
+
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8030)
+    app.run(host='localhost', port= 8031)

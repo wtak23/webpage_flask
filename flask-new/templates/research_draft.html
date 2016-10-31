@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{%- block body -%}
+    <header>
+        <h1>{{title}}</h1>
+        <p>This page is still under construction...</p>
+    </header>
+
+    {#- ===== From view-source:file:///C:/Users/takanori/Dropbox/webpage2016/html5up-alpha/index.html ===== -#}
+    <div class="row">
+        <div class="6u 12u(narrower)" >
+            <section class="box">
+                {# <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%;"/></span> #}
+                <span class="image featured"><img src='static/img/image_regis.png' alt="" style="max-width: 100%;"/></span>
+                <h3 style="text-align: center;">Uncertainty Analysis for Biomedical Image Registration</h3>
+                {# <p>Image registration is the task of finding a spatial transformation that brings two images into alignment. We introduce a data-driven method that allows one to visualize and quantify image registration uncertainty using spatially adaptive confidence regions. At the heart of our proposed method is a novel shrinkage-based estimate of the distribution on deformation parameters.</p> #}
+
+                <p>
+                <b>T. Watanabe</b> and C. Scott, 
+                "<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31340-0_13">Spatial
+                    Confidence Regions for Quantifying and Visualizing Registration Uncertainty</a>," 
+                <em>Biomedical Image Registration</em>, vol. 7359, pp. 120-130, 2012.  
+                [<a href=http://takwatanabe.me/pdf/wbir2012.pdf ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>]
+                </p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
+
+            </section>
+
+        </div>
+        <div class="6u 12u(narrower)">
+
+            <section class="box special">
+                <span class="image featured"><img src={{file_url('img/brain2.jpg')}} alt="" style="max-width: 100%; height:350px;"/></span>
+                <h3>Accumsan integer</h3>
+                <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+
+    <br/>
+
+    <style type="text/css">
+        .tiles article {
+            -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+            -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+            -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            position: relative;
+            /*width: calc(33.33333% - 2.5em);*/
+            width: calc(50.0% - 2.5em); /* tw */
+            margin: 2.5em 0 0 2.5em;
+        }
+        .myimg {
+            /*http://stackoverflow.com/questions/388180/how-to-make-an-image-center-vertically-horizontally-inside-a-bigger-div*/
+            min-height: 400px;
+            /*padding-top:100px;*/
+        }
+    </style>
+    {#- ===== http://stackoverflow.com/questions/8470070/how-to-create-grid-tile-view-with-css ===== -#}
+    <section class="tiles">
+        <article class="style1">
+            <span class="image myimg">
+                {# <img src='static/img/image_regis.png' alt="" / style="padding-top:50px;"> #}
+                <img src={{file_url('img/research/image_regis.png')}} alt="" / style="padding-top:50px;">
+            </span>
+            <a href="generic.html">
+                <h2>Uncertainty Analysis for Image Registration</h2>
+                <div class="content">
+                    <p>Image registration is the task of finding a spatial transformation that brings two images into alignment. We introduce a data-driven method that allows one to visualize and quantify image registration uncertainty using spatially adaptive confidence regions. At the heart of our proposed method is a novel shrinkage-based estimate of the distribution on deformation parameters.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style2">
+            <span class="image">
+                <img src={{file_url('img/brain.jpg')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style2</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style4">
+            <span class="image">
+                <img src={{file_url('img/brain2.jpg')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style4</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style5">
+            <span class="image">
+                <img src={{file_url('img/brain2.jpg')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style5</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style6">
+            <span class="image">
+                <img src={{file_url('img/brain2.jpg')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style6</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style2">
+            <span class="image">
+                <img src={{file_url('img/corr_clin_scores.png')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style2</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style3">
+            <span class="image">
+                <img src={{file_url('img/corr_clin_scores.png')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style3</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+        <article class="style1">
+            <span class="image">
+                <img src={{file_url('img/corr_clin_scores.png')}} alt="" />
+            </span>
+            <a href="generic.html">
+                <h2>style1</h2>
+                <div class="content">
+                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                </div>
+            </a>
+        </article>
+    </section>
+
+    <br/>
+    {% include "_tests_/research_old.html" %}
+{%- endblock body -%}

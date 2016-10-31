@@ -2,110 +2,171 @@
 {%- block body -%}
     <header>
         <h1>{{title}}</h1>
-        <p>This page is still under construction...</p>
+        <p><mark>This page is still under construction...</mark></p>
     </header>
 
-    <section class="tiles">
-        <article class="style1">
-            <span class="image">
-                <img src={{file_url('img/brain.jpg')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style1</h2>
-                <div class="content">
-                    <p>This is the human connctome project.</p>
+    <h2>Research Theme &ndash; Machine Learning on Massive Biomedical Data</h2>
+    <div class="row" style="padding-bottom: 0px">
+
+
+        <div class="col-md-7 col-xs-7" style="padding-top: 10px">     
+            <p>
+                The central theme of my research is to develop computationally tractable 
+                machine learning methods that allow us to extract scientifically meaningful 
+                information from massive and highly complex data, particularly biomedical 
+                datasets (e.g., fMRI, DTI, gene microarray) which further tend to be noisy
+                and limited in sample size. 
+            </p>
+            <p>
+                As many traditional statistical methods break down in such setting, the goal of my research is to: 
+                (1) develop specialized machine learning methods that leverage potential structure 
+                in the data, which can improve predictive power and model interpretability, and 
+                (2) design and implement scalable (numerical) optimization algorithms to 
+                address data dimensionality.
+            </p>
+            <p>
+                <!--For additional information about my research, please visit my 
+                <a href="research.php">research page</a> for a list of my publications.-->
+            </p>
+        </div>
+        <div class="col-md-5 col-xs-5">
+            <img src={{file_url('img/research/research_brain3.png')}} alt="Brain Connectivity" 
+                 width="100%" style="position:relative; top:0px;">
+        </div>
+    </div>
+
+    <br/>
+
+    <h2>PhD Dissertation (University of Michigan &ndash; Ann Arbor, 2015)</h2>
+    <ul>
+        <li>Scalable Machine Learning Methods for Massive Biomedical Data Analysis 
+            
+            [<a href=http://takwatanabe.me/pdf/thesis-final.pdf ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> pdf</a>]
+            
+        </li>
+    </ul>
+
+    {#- ===== From view-source:file:///C:/Users/takanori/Dropbox/webpage2016/html5up-alpha/index.html ===== -#}
+    <h2>Research Projects</h2>
+    <p>The following are some of the research projects I have worked on during my academic career.</p>
+
+    {% set fontsize = "20px" %}
+    <div class="row">
+        {% set height = "850px" %}
+        <div class="6u 12u(narrower)">
+            <section class="box special" style="height:{{height}};">
+                <span class="image featured"><img src={{file_url('img/research/snmf2.png')}} alt="" style="max-width: 100%;padding-bottom:30px; "/></span>
+                <h3>Discriminative Subnetwork Extraction using Supervised NMF</h3>
+                <hr>
+                <div style="text-align:left;">
+                <b>T. Watanabe</b>, B. Tunc, D. Parker, J. Kim, R. Verma,  
+                <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-46720-7_20">Label-Informed Non-negative Matrix Factorization with Manifold Regularization for Discriminative Subnetwork Detection
+                <em>Medical Image Computing and Computer-Assisted Intervention</em> 2016. 
                 </div>
-            </a>
-        </article>
-        <article class="style2">
-            <span class="image">
-                <img src={{file_url('img/brain.jpg')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style2</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <br/>
+                <div style='font-size:{{fontsize}}'>
+                [<a href="http://takwatanabe.me/pdf/miccai2016.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>] 
+                [<a href="https://github.com/wtak23/pytak/blob/master/ml/nmf.py"><i class="fa fa-github" aria-hidden="true"></i> code</a>]
                 </div>
-            </a>
-        </article>
-        <article class="style3">
-            <span class="image">
-                <img src={{file_url('img/brain.jpg')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style3</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="6u 12u(narrower)">
+            <section class="box special" style="height:{{height}};">
+                <span class="image featured"><img src={{file_url('img/research/pca_comp2.png')}} alt="" style="max-width: 105%;padding-bottom:0px; margin-left:-10px;"/></span>
+                <h3> Harmonization of inter-site Structural Connectivity Data</h3>
+                <hr>
+                <div style="text-align:center;">
+                <b>Details coming soon ...</b>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        {% set height = "800px" %}
+        <div class="6u 12u(narrower)">
+            <section class="box special" style="height:{{height}};">
+                <span class="image featured"><img src={{file_url('img/corr_clin_scores.png')}} alt="" style="max-width: 108%;padding-bottom:40px; margin-left:-15px;"/></span>
+                <h3>Analysis of Gender Differences in Structural Connectivity</h3>
+                <hr>
+                <div style="text-align:center;">
+                <b>Details coming soon ...</b>
+            </section>
+        </div>
+        <div class="6u 12u(narrower)">
+            <section class="box special" style="height:{{height}};">
+                <span class="image featured"><img src={{file_url('img/research/brain_schiz.png')}} alt="" style="max-width: 100%;padding-bottom:20px; "/></span>
+                <h3>Disease Classification using resting-state-fMRI based Connectomes</h3>
+                <hr>
+                <div style="text-align:left;">
+                <b>T. Watanabe</b>, D. Kessler,  C. Scott, M. Angstadt, C. Sripada, 
+                "<a href="http://www.sciencedirect.com/science/article/pii/S1053811914002286">Disease
+                Prediction based on Functional Connectomes using a Scalable and Spatially-Informed 
+                    Support Vector Machine</a>,'' 
+                <em>ICASSP</em>,
+                <em>NeuroImage</em> 2014. 
                 </div>
-            </a>
-        </article>
-        <article class="style4">
-            <span class="image">
-                <img src={{file_url('img/brain2.jpg')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style4</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <br/>
+                <div style='font-size:{{fontsize}}'>
+                [<a href=http://arxiv.org/abs/1310.5415 ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Arxiv</a>] 
+                [<a href="https://github.com/wtak23/spatialSVM"><i class="fa fa-github" aria-hidden="true"></i> code</a>]
                 </div>
-            </a>
-        </article>
-        <article class="style5">
-            <span class="image">
-                <img src={{file_url('img/brain2.jpg')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style5</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        {% set height = "800px" %}
+        <div class="6u 12u(narrower)">
+            <section class="box special" style="height:{{height}};">
+                <span class="image featured"><img src={{file_url('img/research/multitask.png')}} alt="" style="max-width: 100%;padding-bottom:20px; "/></span>
+                <h3>Multisite Disease Classification using Multitask Structured Sparse SVM</h3>
+                <hr>
+                <div style="text-align:left;">
+                <b>T. Watanabe</b>, D. Kessler,  C. Scott, C. Sripada, 
+                "<a href="http://stmi2014.ece.cornell.edu">Multisite Disease Classification with Functional Connectomes via Multitask Structured Sparse SVM</a>,'' 
+                <em>Sparsity Techniques in Medical Imaging</em>, 2014. 
                 </div>
-            </a>
-        </article>
-        <article class="style6">
-            <span class="image">
-                <img src={{file_url('img/brain2.jpg')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style6</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <div style='font-size:{{fontsize}}'>
+                [<a href="http://takwatanabe.me/pdf/stmi2014.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>] 
+                [<a href="https://github.com/wtak23/spatialSVM"><i class="fa fa-github" aria-hidden="true"></i> code</a>]
                 </div>
-            </a>
-        </article>
-        <article class="style2">
-            <span class="image">
-                <img src={{file_url('img/corr_clin_scores.png')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style2</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="6u 12u(narrower)">
+            <section class="box special" style="height:{{height}};">
+                {# <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%;"/></span> #}
+                <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%; padding-bottom:7px;"/></span>
+                <h3 style="text-align: center;">Uncertainty Analysis for Biomedical Image Registration</h3>
+                {# <p>Image registration is the task of finding a spatial transformation that brings two images into alignment. We introduce a data-driven method that allows one to visualize and quantify image registration uncertainty using spatially adaptive confidence regions. At the heart of our proposed method is a novel shrinkage-based estimate of the distribution on deformation parameters.</p> #}
+                <hr>
+                <div style="text-align:left;">
+                <b>T. Watanabe</b> and C. Scott, 
+                "<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31340-0_13">Spatial
+                    Confidence Regions for Quantifying and Visualizing Registration Uncertainty</a>," 
+                <em>Biomedical Image Registration</em>, 2012.
                 </div>
-            </a>
-        </article>
-        <article class="style3">
-            <span class="image">
-                <img src={{file_url('img/corr_clin_scores.png')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style3</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                <br/>
+
+                <div style='font-size:{{fontsize}}'>
+                [<a href=http://takwatanabe.me/pdf/wbir2012.pdf ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>]
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
                 </div>
-            </a>
-        </article>
-        <article class="style1">
-            <span class="image">
-                <img src={{file_url('img/corr_clin_scores.png')}} alt="" />
-            </span>
-            <a href="generic.html">
-                <h2>style1</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                </div>
-            </a>
-        </article>
-    </section>
+            </section>
+        </div>
+
+    </div>
+
+
+
 
     <br/>
     {% include "_tests_/research_old.html" %}

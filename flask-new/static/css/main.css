@@ -2308,7 +2308,8 @@
 /* Box */
 
 	.box {
-		border-radius: 4px;
+		/*border-radius: 4px;*/
+		border-radius: 18px;
 		border: solid 1px #c9c9c9;
 		margin-bottom: 2em;
 		padding: 1.5em;
@@ -2608,6 +2609,7 @@
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
 			width: calc(33.33333% - 2.5em);
+			/*width: calc(50.0% - 2.5em); /* tw */*/
 			margin: 2.5em 0 0 2.5em;
 		}
 
