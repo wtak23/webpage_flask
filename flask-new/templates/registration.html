@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{%- block body -%}
+    <h1>{{title}}</h1>
+    <p>Image registration is the task of finding a spatial transformation that brings two images into alignment. It is a critical step in medical image analysis, for example, to align images of a patient taken under different modalities such at MRI and CT. Our objective is to apply machine learning to quantify the uncertainty in image registration algorithms. At the heart of our proposed method is a novel shrinkage-based estimate of the distribution on deformation parameters.
+
+    <br/>
+    <br/>
+
+    The figure below shows a reference image (left) and a holomogous image (right) that has been registered to the reference image. The selected point in the reference image corresponds, with high confidence, to a point in the region shown in the homologous image. In this example, the orientation of the confidence region reflects uncertainty due to the sliding motion of the diaphragm.
+
+    <br/>
+    <br/>
+
+    <span class="image main" style="width:55%; margin: 0 auto; display: block;"><img src={{file_url('img/research/regis_demo1.png')}} alt="" /></span>
+
+    <br/>
+    <br/>
+    A few of the confidence regions are shown below in (a)-(h), with the red marks representing 100 realizations of registration errors.  Note how the confidence regions reflect the local image structure.
+
+    <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 80%; margin: 0 auto; display: block;"/></span>
+
+    </p>
+
+
+
+    <br/>
+    <h2>Relevant Publication</h2>
+    <b>T. Watanabe</b> and C. Scott, 
+    "<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31340-0_13">Spatial
+        Confidence Regions for Quantifying and Visualizing Registration Uncertainty</a>," 
+    <em>Biomedical Image Registration</em>, 2012.
+{%- endblock body -%}

@@ -54,7 +54,8 @@
     <div class="row">
         {% set height = "min-height:900px;" %}
         <div class="6u 12u(narrower)">
-            <section class="box special" style="{{height}}">
+            {# <section class="box special" style="{{height}}"> #}
+            <section class="box special">
                 <span class="image featured"><img src={{file_url('img/research/snmf2.png')}} alt="" style="max-width: 100%;padding-bottom:30px; "/></span>
                 <h3>Discriminative Subnetwork Extraction using Supervised NMF</h3>
                 <hr>
@@ -73,8 +74,10 @@
                 </ul>
             </section>
         </div>
+
         <div class="6u 12u(narrower)">
-            <section class="box special" style="{{height}}">
+            {# <section class="box special" style="{{height}}"> #}
+            <section class="box special">
                 <span class="image featured"><img src={{file_url('img/research/pca_comp2.png')}} alt="" style="max-width: 105%;padding-bottom:0px; margin-left:-10px;"/></span>
                 <h3> Harmonization of inter-site Structural Connectivity Data</h3>
                 <hr>
@@ -83,10 +86,12 @@
             </section>
         </div>
     </div>
+    {% set fontsize = "20px" %}
     <div class="row">
         {% set height = "min-height:1000px;" %}
         <div class="6u 12u(narrower)">
-            <section class="box special" style="{{height}}">
+            <section class="box special">
+            {# <section class="box special" style="{{height}}"> #}
                 <span class="image featured"><img src={{file_url('img/corr_clin_scores.png')}} alt="" style="max-width: 108%;padding-bottom:40px; margin-left:-15px;"/></span>
                 <h3>Analysis of Gender Differences in Structural Connectivity</h3>
                 <hr>
@@ -95,7 +100,8 @@
             </section>
         </div>
         <div class="6u 12u(narrower)">
-            <section class="box special" style="{{height}}">
+            {# <section class="box special" style="{{height}}"> #}
+            <section class="box special">
                 <span class="image featured"><img src={{file_url('img/research/brain_schiz.png')}} alt="" style="max-width: 100%;padding-bottom:20px; "/></span>
                 <h3>Disease Classification using resting-state-fMRI based Connectomes</h3>
                 <hr>
@@ -118,10 +124,13 @@
             </section>
         </div>
     </div>
+
+    {% set fontsize = "20px" %}
     <div class="row">
         {% set height = "min-height:1000px;" %}
         <div class="6u 12u(narrower)">
-            <section class="box special" style="{{height}}">
+            {# <section class="box special" style="{{height}}"> #}
+            <section class="box special">
                 <span class="image featured"><img src={{file_url('img/research/multitask.png')}} alt="" style="max-width: 100%;padding-bottom:20px; "/></span>
                 <h3>Multisite Disease Classification using Multitask Structured Sparse SVM</h3>
                 <hr>
@@ -130,6 +139,8 @@
                 "<a href="http://stmi2014.ece.cornell.edu">Multisite Disease Classification with Functional Connectomes via Multitask Structured Sparse SVM</a>,'' 
                 <em>Sparsity Techniques in Medical Imaging</em>, 2014. 
                 </div>
+
+                <br/>
                 <div style='font-size:{{fontsize}}'>
                 [<a href="http://takwatanabe.me/pdf/stmi2014.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>] 
                 [<a href="https://github.com/wtak23/spatialSVM"><i class="fa fa-github" aria-hidden="true"></i> code</a>]
@@ -140,7 +151,8 @@
             </section>
         </div>
         <div class="6u 12u(narrower)">
-            <section class="box special" style="{{height}}">
+            {# <section class="box special" style="{{height}}"> #}
+            <section class="box special">
                 {# <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%;"/></span> #}
                 <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 100%; padding-bottom:7px;"/></span>
                 <h3 style="text-align: center;">Uncertainty Analysis for Biomedical Image Registration</h3>
@@ -157,7 +169,7 @@
                 <div style='font-size:{{fontsize}}'>
                 [<a href=http://takwatanabe.me/pdf/wbir2012.pdf ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>]
                 <ul class="actions">
-                    <li><a href="#" class="button alt">Learn More</a></li>
+                    <li><a href="registration.html" class="button alt">Learn More</a></li>
                 </ul>
                 </div>
             </section>

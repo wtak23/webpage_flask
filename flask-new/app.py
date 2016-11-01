@@ -143,6 +143,10 @@ def resources():
 def elements():
     return render_template('elements.html',title="Elements")
 
+@app.route("/registration.html")
+def registration():
+    return render_template('registration.html',title="Spatial Confidence Regions for Registration Uncertainty Analysis")
+
 #-----------------------------------------------------------------------------#
 # jsonify url
 #-----------------------------------------------------------------------------#

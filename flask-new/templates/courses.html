@@ -70,9 +70,18 @@
   {% set certif_edx1 = "https://courses.edx.org/certificates/d43ee5170e2a4110b0e6bb96366be06a" %}
   {% set certif_edx2 = "https://courses.edx.org/certificates/5444088fa33343848613f0a392aa3afc" %}
   {% set certif_edx3 = "https://courses.edx.org/certificates/0f48536ccb5246cea7b638ea3862d552" %}
-  {% set info_alg = "Basic principles underlying algorithm design, including: (1) divide-and-conquer-design paradigm (eg, merge-sort, quick-sort), (2) graph algorithms (shortest path algorithms such as Dijkstra's algorithm), (3) Heap data structure, (4) balanced binary search tree (via Red-black and AVL trees) (5) hash tables (collision-avoidance techniques such as chaining and linear probing)." | linebreaksbr %}
-  {% set info_edx  = 'How to perform data science and data engineering at scale using Spark, a cluster computing system well-suited for large-scale machine learning tasks. It will also present an integrated view of data processing by highlighting the various components of data analysis pipelines, including exploratory data analysis, feature extraction, supervised learning, and model evaluation. Students will gain hands-on experience building and debugging Spark applications. Internal details of Spark and distributed machine learning algorithms will be covered, which will provide students with intuition about working with big data and developing code for a distributed environment.
+  {% set info_alg = "Basic principles underlying algorithm design, including: 
+  <ol>
+  <li>divide-and-conquer-design paradigm (eg, merge-sort, quick-sort)
+  <li>graph algorithms (shortest path algorithms such as Dijkstra's algorithm)
+  <li>heap data structure
+  <li>balanced binary search tree (via Red-black and AVL trees) 
+  <ii>hash tables (collision-avoidance techniques such as chaining and linear probing)
+  </ol>" | linebreaksbr %}
+  {% set info_edx  = 'Perform data science and data engineering at scale using <strong>Spark</strong>, a cluster computing system well-suited for large-scale machine learning tasks. Course covers various components of data analysis pipelines, including: <i>exploratory data analysis, feature extraction, supervised learning, and model evaluation</i>. Internal details of Spark and distributed machine learning algorithms are also covered to allow one to gain intuition about working with big data and developing code for a distributed environment.
+  <br/>
 
+  List of topics:
   <ul>
     <li>How to use Spark and its libraries to solve big data problems
     <li>How to approach large scale data science and engineering problems
@@ -81,9 +90,9 @@
     <li>Use cases for Spark
   </ul>
   ' | linebreaksbr %}
-  {% set info_edx1  = 'This course teaches the basics of working with Spark, providing the necessary foundation for diving deeper into Spark. Course goes over Spark\'s architecture and programming model, including commonly used APIs. After completing this course, students will be able to write and debug basic Spark applications. This course will also explain how to use Spark\'s web user interface (UI), how to recognize common coding errors, and how to proactively prevent errors. The focus of this course will be Spark Core and Spark SQL.
+  {% set info_edx1  = 'This course teaches the basics of working with Spark, providing the necessary foundation for diving deeper into Spark. Course goes over Spark\'s architecture and programming model, including commonly used APIs. The focus of this course will be Spark Core and Spark SQL.
 
-  <br><br>Course will go over:
+  <br><br>List of topics:
   <ul>
     <li>Basic Spark architecture
     <li>Common Spark operations
@@ -91,26 +100,24 @@
     <li>How to debug a Spark program
   </ul>
   ' | linebreaksbr %}
-  {% set info_edx2  = 'This statistics and data analysis course will attempt to articulate the expected output of data scientists and then teach students how to use PySpark (part of Spark) to deliver against these expectations. The course assignments include log mining, textual entity recognition, and collaborative filtering exercises that teach students how to manipulate data sets using parallel processing with PySpark.<br><br>
+  {% set info_edx2  = 'The course assignments include log mining, textual entity recognition, and collaborative filtering exercises that teach students how to manipulate data sets using parallel processing with PySpark.
 
-  Course will go over:
   <ul>
-    <li>How to use Apache Spark to perform data analysis
-    <li>How to use parallel programming to explore data sets
-    <li>Apply log mining, textual entity recognition and collaborative filtering techniques to real-world data questions
+      <li><strong>Lab1: Power Plant Machine Learning Pipeline Application</strong> &mdash; <i>Extract-Tranform-Load</i> and <i>Exploratory Data Analysis</i> using Apache Spark on a real-world Power Plant dataset.     Apply several different machine learning algorithms (<i>Elastic-net, Decision Tree, Random Forest</i>) to solve a supervised regression problem on the dataset.
+      <li><strong>Lab2: Collaborative Filtering</strong> &mdash; Movie rating prediction with Apache Spark using the Alternating Least Squares method on the <i>MovieLens benchmark rating dataset</i>
+      <li><strong>Lab3: Word Count Application</strong> &mdash; Use Spark to develop a word count application from a unstructured text dataset. The lab focuses on using Spark\'s RDD data-structure to calculate the most common words in the Complete Works of William Shakespeare
+      <li><strong>Lab4: Text Analysis and Entity Resolution with TF-IDF</strong> &mdash; use Apache Spark to apply scalable text analysis techniques and perform entity resolution across two datasets from Amazon and Google. Here we learn how to: tokenize a string, remove stopwords, compute cosine-similarity measures from text data, and implement <i>weighted bag-of-words</i> using token-weighted via TF-IDF (term-frequency/inverse-document frequency) 
   </ul>
   ' | linebreaksbr %}
-  {% set info_edx3  = 'This statistics and data analysis course introduces the underlying statistical and algorithmic principles required to develop scalable real-world machine learning pipelines. We present an integrated view of data processing by highlighting the various components of these pipelines, including exploratory data analysis, feature extraction, supervised learning, and model evaluation. You will gain hands-on experience applying these principles using Spark, a cluster computing system well-suited for large-scale machine learning tasks, and its packages spark.ml and spark.mllib. You will implement distributed algorithms for fundamental statistical models (linear regression, logistic regression, principal component analysis) while tackling key problems from domains such as online advertising and cognitive neuroscience.
+  {% set info_edx3  = 'This course introduces some key statistical and algorithmic principles required to develop scalable real-world machine learning (ML) pipelines. An integrated view of data processing is presented by highlighting the various components of ML pipelines, including: exploratory data analysis, feature extraction, supervised learning, and model evaluation. 
 
-  Course will go over:
   <ul>
-    <li>The underlying statistical and algorithmic principles required to develop scalable real-world machine learning pipelines
-    <li>Exploratory data analysis, feature extraction, supervised learning, and model evaluation
-    <li>Application of these principles using Spark
-    <li>How to implement distributed algorithms for fundamental statistical models
+      <li><strong>Lab1: Word Count Application</strong> &mdash; Use Spark to develop a word count application from a unstructured text dataset. The lab focuses on using Spark\'s RDD data-structure to calculate the most common words in the Complete Works of William Shakespeare
+      <li><strong>Lab2: Linear Regression using Spark DataFrames</strong> &mdash; supervised learning using the <i>Million Song Dataset</i> from the UCI ML Repository, where the goal is to predict the release year of a song given a set of audio features. Lab goes over key  ML pipeline components, including: parsing the input dataset, training via gradient descent, model evaluation, parameter tuning via grid search.
+      <li><strong>Lab3: Click-through Rate Prediction for Online Advertisements</strong> &mdash; Construct a logistic regression pipeline to predict click-through rate using data from a recent Kaggle competition. Numerical features are extracted from raw categorical data using one-hot-encoding, and the dimensionality of these features is reduced via hashing. The probabilistic predictions from Logistic Regression are interpreted using an ROC plot.  
+      <li><strong>Lab4: Neuroimaging Analysis via PCA</strong> &mdash; Identify patterns of brain activity in larval zebrafish using time-varying images that capture a zebrafish\'s neural activity. After implementing distributed PCA from scratc, PCA is used to identify distinct patterns across the zebrafish brain that are induced by different types of stimuli.
   </ul>
   ' | linebreaksbr %}
-
 
   {#- ===== course urls ===== -#}
   {% set url516 = 'http://web.eecs.umich.edu/~fessler/course/516/index.html' %}
@@ -163,39 +170,7 @@
   {%- endmacro -%}
 
   {#- ===== list out courses ===== -#}
-  <h2>MOOC Courses</h2>
-  <ul style="list-style:none">
-      {# <li><i>(hover over course title for course description)</i></li> #}
-      <li>({{ahref("http://takwatanabe.me/coding_notes/pyspark/top-edx.html", "My coding notebook for the courses")}})</li>
-      <li>
-          {{course_info("Coursera - Algorithms: Design and Analysis (Stanford University)", info_alg)}}
-          ({{ ahref(url_alg, 'course link') }},   {{ahref(cetif_alg, "course certificate") }})
-      </li>
-      <li>
-          {{course_info("<strong>BerkeleyX - XSeries Program &mdash; Data Science and Engineering with Apache Spark</strong>", info_edx)}}
-          ({{ ahref(url_edx, 'course link') }})
-      </li>
-      <ul style="list-style:none">
-          <li>
-              <mark>A three-course summer program created in partnership with Databricks teaching how to perform data science and data engineering at scale using Spark</mark>
-              ({{ahref(certif_edx, "program completion certificate") }})
-          </i>
-          </li>
-          <li>
-              {{course_info("EdX - Introduction to Apache Spark", info_edx1)}}
-              ({{ ahref(url_edx1, 'course link') }}, {{ahref(certif_edx1, "course certificate") }})
-          </li>
-          <li>
-              {{course_info("EdX - Big Data Analysis with Apache Spark", info_edx2)}}
-              ({{ ahref(url_edx2, 'course link') }}, {{ahref(certif_edx2, "course certificate") }})
-          </li>
-          <li>
-              {{course_info("EdX - Distributed Machine Learning with Apache Spark", info_edx3)}}
-              ({{ ahref(url_edx3, 'course link') }}, {{ahref(certif_edx3, "course certificate") }})
-          </li>
-      </ul>
-  </ul>
-      
+     
   <h2>Graduate Coursework (University of Michigan)</h2>
   <ul style="list-style:none">
       <li><i>(hover over course title for course description)</i></li>
@@ -244,6 +219,46 @@
           {{course_info("STATS 610 &mdash; Statistical Inference", info610)}}
           ({{ ahref(file_url('pdf/notes/610notes.pdf'), 'notes')  }}, {{ ahref(url610, 'course link') }})
       </li>
+  </ul>
+
+  <h2>MOOC Courses
+  {# (<span style="font-weight:normal;">{{ahref("http://takwatanabe.me/coding_notes/pyspark/top-edx.html", "coding notebook for these courses")}}</span>) #}
+    <span style="font-weight:normal;font-size:80%;">
+    (<a href="http://takwatanabe.me/coding_notes/pyspark/top-edx.html"><i class="fa fa-book" aria-hidden="true"></i> Coding notebooks for these courses</a>)
+    </span>
+  </h2>
+  <ul style="list-style:none">
+      <li><i>(hover over course title for course description)</i></li>
+      {# <li> #}
+        {# (<a href="http://takwatanabe.me/coding_notes/pyspark/top-edx.html"><i class="fa fa-book" aria-hidden="true"></i> Coding notebooks created for these courses</a>) #}
+        {# {{ahref("http://takwatanabe.me/coding_notes/pyspark/top-edx.html", "Coding notebooks created for these courses")}}) #}
+      {# </li> #}
+      <li>
+          {{course_info("Coursera - Algorithms: Design and Analysis (Stanford University)", info_alg)}}
+          ({{ ahref(url_alg, 'course link') }},   {{ahref(certif_alg, "course certificate") }})
+      </li>
+      <li>
+          {{course_info("<strong>BerkeleyX - XSeries Program &mdash; Data Science and Engineering with Apache Spark</strong>", info_edx)}}
+          ({{ ahref(url_edx, 'link') }}, {{ahref(certif_edx, "program certificate") }})
+      </li>
+      <ul style="list-style:none">
+          <li>
+              <mark>A three-course summer program teaching how to perform data science and data engineering at scale using Spark</mark>
+          </i>
+          </li>
+          <li>
+              {{course_info("EdX - Introduction to Apache Spark", info_edx1)}}
+              ({{ ahref(url_edx1, 'course link') }}, {{ahref(certif_edx1, "course certificate") }})
+          </li>
+          <li>
+              {{course_info("EdX - Big Data Analysis with Apache Spark", info_edx2)}}
+              ({{ ahref(url_edx2, 'course link') }}, {{ahref(certif_edx2, "course certificate") }})
+          </li>
+          <li>
+              {{course_info("EdX - Distributed Machine Learning with Spark", info_edx3)}}
+              ({{ ahref(url_edx3, 'course link') }}, {{ahref(certif_edx3, "course certificate") }})
+          </li>
+      </ul>
   </ul>
 
 
