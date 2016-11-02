@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {%- block body -%}
     <h1>{{title}}</h1>
-    <p>Image registration is the task of finding a spatial transformation that brings two images into alignment. It is a critical step in medical image analysis, for example, to align images of a patient taken under different modalities such at MRI and CT. Our objective is to apply machine learning to quantify the uncertainty in image registration algorithms. At the heart of our proposed method is a novel shrinkage-based estimate of the distribution on deformation parameters.
+    Image registration is the task of finding a spatial transformation that brings two images into alignment. It is a critical step in medical image analysis, for example, to align images of a patient taken under different modalities such at MRI and CT. Our objective is to apply machine learning to quantify the uncertainty in image registration algorithms. At the heart of our proposed method is a novel shrinkage-based estimate of the distribution on deformation parameters.
 
     <br/>
     <br/>
@@ -11,7 +11,9 @@
     <br/>
     <br/>
 
-    <span class="image main" style="width:55%; margin: 0 auto; display: block;"><img src={{file_url('img/research/regis_demo1.png')}} alt="" /></span>
+    <span class="image main" style="width:90%; margin: 0 auto; display: block;">
+        <img src={{file_url('img/research/regis_demo1.png')}} alt="" />
+    </span>
 
     <br/>
     <br/>
@@ -19,7 +21,6 @@
 
     <span class="image featured"><img src={{file_url('img/research/image_regis.png')}} alt="" style="max-width: 80%; margin: 0 auto; display: block;"/></span>
 
-    </p>
 
 
 
@@ -28,5 +29,9 @@
     <b>T. Watanabe</b> and C. Scott, 
     "<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31340-0_13">Spatial
         Confidence Regions for Quantifying and Visualizing Registration Uncertainty</a>," 
-    <em>Biomedical Image Registration</em>, 2012.
+    <br/>
+    <em>Biomedical Image Registration</em>, vol. 7359, pp. 120-130, 2012.
+
+    <br/>
+    [<a href="http://takwatanabe.me/pdf/wbir2012.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>]
 {%- endblock body -%}

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
-from flask import jsonify, render_template, request, url_for
+from flask import jsonify, render_template, request, url_for,redirect
 app = Flask(__name__)
 
 import re
@@ -143,9 +143,40 @@ def resources():
 def elements():
     return render_template('elements.html',title="Elements")
 
-@app.route("/registration.html")
+#-----------------------------------------------------------------------------#
+# individual research pages
+#-----------------------------------------------------------------------------#
+@app.route("/research/registration.html")
 def registration():
     return render_template('registration.html',title="Spatial Confidence Regions for Registration Uncertainty Analysis")
+
+
+@app.route("/research/supervised_nmf.html")
+def supervised_nmf():
+    return render_template('supervised_nmf.html',title="Supervised Non-negative Matrix Factorization with Manifold Regularization")
+
+@app.route("/research/spatial_svm.html")
+def spatial_svm():
+    return render_template('spatial_svm.html',title="Spatially-informed Disease Prediction with Structured Sparse Support Vector Machine")
+
+@app.route("/research/multitask_svm.html")
+def multitask_svm():
+    return render_template('multitask_svm.html',title="Multisite Connectome-based Disease Classification ")
+
+@app.route("/aws_flask_test.html")
+def aws_flask_test():
+    return "<strong>I took this down since I was unexpectedly getting billed by AWS</strong> (some of the service I used apparently didn't qualify for the *Free Tier* service...)"
+
+@app.route("/data_science.html")
+def data_science():
+    # return redirect('research.html')
+    # redirect won't work with frozen-flask (understandably...)
+    return 'Please visit <a href="http://takwatanabe.me/data_science">takwatanabe.me/data_science</a>'
+
+@app.route("/pytak.html")
+def pytak():
+    # return redirect('https://github.com/wtak23/pytak')
+    return 'Please visit <a href="http://takwatanabe.me/data_science/pytak.html">takwatanabe.me/data_science/pytak.html</a>'
 
 #-----------------------------------------------------------------------------#
 # jsonify url
@@ -157,4 +188,4 @@ def registration():
 #     return jsonify(items=items) 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port= 8031)
+    app.run(host='localhost', port= 8032)

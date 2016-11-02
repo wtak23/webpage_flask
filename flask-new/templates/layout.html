@@ -18,7 +18,8 @@
         {#- ===== jquery must come before bootstrap.js ===== -#}
         {#- http://stackoverflow.com/questions/22658015/bootstrap-wont-detect-jquery-1-11-0-uncaught-error-bootstraps-javascript-re -#}
         {#- http://stackoverflow.com/questions/13923297/bootstrap-javascript-or-popover-not-working -#}
-        <script src="static/js/jquery.min.js"></script>
+        {# <script src="static/js/jquery.min.js"></script> #}
+        <script src= "{{ url_for('static',filename='js/jquery.min.js') }}"  ></script>
         {# <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> #}
 
         <!-- Latest compiled and minified JavaScript -->
@@ -26,13 +27,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         {# ===== css from html5 ===== #}
-        <link rel="stylesheet" href="static/css/main.css" />
+        {# <link rel="stylesheet" href="static/css/main.css" /> #}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 
         {#- ===== My (tak) styles ===== -#}
-        <link rel="stylesheet" href="static/css/tak.css" />
+        {# <link rel="stylesheet" href="static/css/tak.css" /> #}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/tak.css') }}" />
 
         {# https://jpswalsh.github.io/academicons/ #}
-        <link rel="stylesheet" href="static/css/academicons.css"/>
+        {# <link rel="stylesheet" href="static/css/academicons.css"/> #}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/academicons.css') }}" />
 
         <!--[if lte IE 9]><link rel="stylesheet" href="static/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="static/css/ie8.css" /><![endif]-->
@@ -105,8 +109,8 @@
             <nav id="menu">
                 <h2>Menu</h2>
                 <ul>
-                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="research.html"><i class="fa fa-graduation-cap"></i> 
+                    <li><a href="/index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/research.html"><i class="fa fa-graduation-cap"></i> 
                     Research</a>
                     {# <ul style="list-style:none">
                         <li>test</li>
@@ -117,8 +121,9 @@
                         <li><a href="research.html">test<a></li>
                     </ul> #}
                     </li>
-                    <li><a href="courses.html"><i class="fa fa-book"></i> Courses</a></li>
-                    <li><a href="resources.html"><i class="fa fa-diamond"></i> Resources</a></li>
+                    <li><a href="/courses.html"><i class="fa fa-book"></i> Courses</a></li>
+                    <li><a href="/resources.html"><i class="fa fa-diamond"></i> Resources</a></li>
+                    <li><a href="http://takwatanabe.me/data_science"><i class="fa fa-bar-chart"></i> Data Science Notes</a></li>
                     {# <li><a href="contact.html">Contact Information</a></li> #}
                     {# <li><a href="generic.html">Generic</a></li> #}
                     {# <li><a href="elements.html">Elements</a></li> #}
@@ -146,10 +151,15 @@
         <!-- end wrapper -->
 
         <!-- Scripts -->
-        <script src="static/js/skel.min.js"></script>
-        <script src="static/js/util.js"></script>
+        {# <script src="static/js/skel.min.js"></script> #}
+        <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+
+        {# <script src="static/js/util.js"></script> #}
+        <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+
         <!--[if lte IE 8]><script src="static/js/ie/respond.min.js"></script><![endif]-->
-        <script src="static/js/main.js"></script>
+        {# <script src="static/js/main.js"></script> #}
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     </body>
 </html>

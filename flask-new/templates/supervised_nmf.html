@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{%- block body -%}
+    <h1>{{title}}</h1>
+    
+    <mark>Details and code demo coming soon!</mark>
+    (some documentation built with Sphinx is available <a href="http://takwatanabe.me/coding_notes/python/supervised_nmf.html">here</a>).
+
+    <br/>
+
+    <iframe width="900" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~takanori/356.embed?link=false&logo=false"></iframe>
+    
+    <br/>
+
+    
+    <br/>
+    <br/>
+
+    <span class="image main" style="width:90%; margin: 0 auto; display: block;">
+        {# <img src={{file_url('img/research/regis_demo1.png')}} alt="" /></span> #}
+        <img src="{{file_url('img/research/sc_info.png')}}")}} alt="" />
+        
+    </span>
+
+    <br/>
+    <br/>
+
+    <span class="image main" style="width:100%; margin: 0 auto; display: block;">
+        <img src="{{file_url('img/research/nmf_basis.png')}}")}} alt="" />
+    </span>
+
+    <br/>
+    <br/>
+
+
+    <br/>
+    <h2>Relevant Publication</h2>
+    <b>T. Watanabe</b>, B. Tunc, D. Parker, J. Kim, R. Verma,  
+    <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-46720-7_20">Label-Informed Non-negative Matrix Factorization with Manifold Regularization for Discriminative Subnetwork Detection
+    <em>Medical Image Computing and Computer-Assisted Intervention</em> 2016. 
+    <br/>
+    <br/>
+    <div style='text-align:center; font-size:22px;'>
+    [<a href="http://takwatanabe.me/pdf/miccai2016.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Author preprint</a>] 
+    [<a href="https://github.com/wtak23/pytak/blob/master/ml/nmf.py"><i class="fa fa-github" aria-hidden="true"></i> code</a>]
+    </div>
+{%- endblock body -%}
