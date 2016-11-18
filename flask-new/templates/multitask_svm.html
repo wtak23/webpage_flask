@@ -1,23 +1,41 @@
 {% extends "layout.html" %}
 {%- block body -%}
     <h1>{{title}}</h1>
-    <mark>(details coming soon!)</mark>
 
-    <br/>
+    <h2>Purpose: Making use of Multisite Data-sharing Initiatives</h2> 
+    There is great interest in identifying neuroimaging biomarkers of psychiatric disorders. Such discovery will not only deeply extend our knowledge about the network architecture of the human brain, but also offers the potential for an objective, machinebased diagnostic system to enter the clinical realm. To this end, multiple data-sharing initiatives have been launched in the neuroimaging field, including <a href="http://fcon_1000.projects.nitrc.org/indi/adhd200/">ADHD-200</a>, Alzheimer's Disease Neuroimaging Initiative (<a href="http://www.adni-info.org/">ADNI</a>), Autism Brain Imaging Data Exchange (<a href="http://fcon_1000.projects.nitrc.org/indi/abide/">ABIDE</a>), and Enhanced <a href="http://fcon_1000.projects.nitrc.org/indi/pro/nki.html">NKI-Rockland</a> dataset. These community-wide collaborative efforts offer unique potential, as they foster reproducible research and allow us to examine the association between diseases and biomarkers with unprecedented sample size.
+
+    <br/><br/>
+
+    <h2>Multisite data heterogeneity and multitask learning</h2> 
+
+    However, multisite data present new challenges for this, as the data aggregation process introduces several sources of systematic <a href="https://en.wikipedia.org/wiki/Confounding">confounds</a>, such as variability in the scanner quality, image acquisition protocol, subject demographics, and other sources of experimental variations. 
+    To effectively make use of multisite data, it is imperative to train the classifiers in a way that accounts for these site-specific heterogeneities. To this end, we propose a classification framework that adopts a <a href="https://en.wikipedia.org/wiki/Multi-task_learning">multitask learning</a> approach.
+    In brief, the idea behind multitask learning is to <i>jointly</i> train multiple tasks in order to improve classification performance, under the assumption that the tasks are related to each other in some sense.
+    <br/><br/>
+    Our method adopts a penalization scheme that accounts for the following two-way structure that exists in a multisite connectomic dataset: (1) the <u>6-D spatial structure</u> in the functional connectomes that arises from pairs of points in 3-D brain space, and (2) the <u>inter-site structure</u> captured via the multitask L1/L2-penalty, which allows consistent model interpretation to be made by selecting the same set of informative features across sites. 
+    <br/><br/>
+
     <span class="image main" style="width:80%; margin: 0 auto; display: block;">
-        <img src="{{file_url('img/research/multitask.png')}}")}} alt="" />
-        <br/>
+        <img src="{{file_url('img/research/mtl_feature_selection.png')}}")}} alt="" />
+        <figcaption style="font-size:13pt;">The multitask L1/L2 penalty (right) allows us recover models that provide consistent feature selection across sites, which is critical for interpretation.</figcaption>
     </span>
-    <span class="image main" style="width:95%; margin: 0 auto; display: block;">
-        <img src="{{file_url('img/research/mtl_table.png')}}")}} alt="" />
-        <br/>
-        <img src="{{file_url('img/research/mtl_brain.png')}}")}} alt="" />
-        <br/>
-    </span>
-
     <br/>
 
+    <h2>Results: improved classification and model interpretability</h2>
+    The experiments on the publicly available multisite <u>ADHD-200 dataset</u> (7 contributing sites) not only shows that the proposed multitask approach can lead to improvement in classification performance, but also yields interpretable models that have consistent representation of informative features across sites.
 
+    <br/><br/>
+    <span class="image main" style="width:85%;margin: 0 auto; display: block;">
+        <img src="{{file_url('img/research/mtl_results2.png')}}")}} alt=""  style="width:95%;margin: 0 auto; display: block;"/>
+        <figcaption style="font-size:13pt;">The proposed multitask L1/L2-based approach demonstrates superior classification performance as opposed to single-task counterparts .</figcaption>
+
+
+        <br/>
+        <img src="{{file_url('img/research/mtl_table.png')}}")}} alt="" />
+        <img src="{{file_url('img/research/mtl_brain.png')}}")}} alt="" />
+        <figcaption style="font-size:13pt;">Weight vectors estimated from the proposed method; here we focus on connectivity patterns in the intra-frontoparietal (6-6) and the intra-default network (7-7) regions (regions frequently reported to exhibit disrupted connectivity patterns in ADHD)</figcaption>
+    </span>
 
     <br/>
     <br/>
