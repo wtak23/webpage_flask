@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{%- block body -%}
+    <h1>{{title}}</h1>
+
+    Diffusion tensor imaging (DTI) and tractography have revealed many critical insights about how the human brain is organized as a large-scale complex network. As multisite imaging studies are becoming increasingly popular within the neuroimaging field, it is imperative to develop methods that can correct for inter-site differences, facilitating the combination of data from multiple sites. In this study, we present a normalization scheme that will correct for site-specific differences in diffusion-based structural connectivity data, and demonstrate its efficacy through multivariate regression experiments using the normalized structural connectivity features to predict subject’s age.
+    <br/>
+    <br/>
+
+    
+    <span class="image main" style="width:90%; margin: 0 auto; display: block;">
+        <img src={{file_url('img/research/pca_comp.png')}} alt="" />
+    </span>
+    <br/>
+    <br/>
+    <span class="image main" style="width:90%; margin: 0 auto; display: block;">
+        {# <img src={{file_url('img/research/intersite-hist.png')}} alt="" /> #}
+        <img src={{file_url('img/research/intersite-qqplot.png')}} alt="" />
+    </span>
+
+    <br/>
+    <br/>
+    <h2>Work in Progress</h2>
+    (some preliminary experiments are posted on my <a href="http://takwatanabe.me/data_science/R/t_1104b_combat_pca.html">notebook page</a>)
+    <ul>
+        <li>Preliminary results submitted to <a href="http://www.ismrm.org/">ISMRM</a> (International Society for Magnetic Resonance in Medicine)</li>
+        <li>Paper in preparation for journal submission</li>
+    </ul>
+
+    <span class="image main" style="width:70%; margin: 0 auto; display: block;">
+        <img src={{file_url('img/research/intersite-regression.png')}} alt="" />
+    </span>
+{%- endblock body -%}

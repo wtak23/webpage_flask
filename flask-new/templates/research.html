@@ -4,41 +4,21 @@
         <h1>{{title}}</h1>
     </header>
 
-    <h2>Research Theme &ndash; Machine Learning on Massive Biomedical Data</h2>
-    <div class="row" style="padding-bottom: 0px">
+    <h2>Machine Learning and Statistical Analysis on Massive Biomedical Data</h2>
 
+    <p><span class="image right" style="width:65%;"><img src={{file_url('img/research/research_brain3.png')}} alt="" /></span>
+        While recent advancements in data acquisition technologies have enabled us to collect and store data of unprecedented size and diversity, it have also introduced new computational and statistical challenges, such as algorithm scalability, multiple comparison problems, and data contamination. 
+        In order to analyze and make any informed decision from such data, it is imperative to design specialized statistical tools and softwares that are scalable, robust, and capable of extracting meaningful information in the presence of data corruption. 
 
-        <div class="col-md-7 col-xs-7" style="padding-top: 10px">     
-            <p>
-                The central theme of my research is to develop computationally tractable 
-                machine learning methods that allow us to extract scientifically meaningful 
-                information from massive and highly complex data, particularly biomedical 
-                datasets (e.g., fMRI, DTI, gene microarray) which further tend to be noisy
-                and limited in sample size. 
-            </p>
-            <p>
-                As many traditional statistical methods break down in such setting, the goal of my research is to: 
-                (1) develop specialized machine learning methods that leverage potential structure 
-                in the data, which can improve predictive power and model interpretability, and 
-                (2) design and implement scalable (numerical) optimization algorithms to 
-                address data dimensionality.
-            </p>
-            <p>
-                <!--For additional information about my research, please visit my 
-                <a href="research.php">research page</a> for a list of my publications.-->
-            </p>
-        </div>
-        <div class="col-md-5 col-xs-5">
-            <img src={{file_url('img/research/research_brain3.png')}} alt="Brain Connectivity" 
-                 width="100%" style="position:relative; top:0px;">
-        </div>
-    </div>
+        <br/><br/>
+        My research specialty lies in developing machine learning and statistical tools for analyzing large-scale neuroimaging data (eg, diffusion and functional MRI, CT) with applications to brain disorders such as schizophrenia, autism, and ADHD.
+        {# One of the central theme of my research is to develop computationally tractable machine learning methods that allow us to extract scientifically meaningful information from massive and highly complex data, particularly biomedical datasets (e.g., fMRI, DTI, gene microarray) which further tend to be noisy and limited in sample size. #}
+        As many traditional statistical methods break down in such setting, the goal of my research is to: (1) develop specialized machine learning methods that leverage potential structure in the data, which can improve predictive power and model interpretability, and (2) design and implement scalable (numerical) optimization algorithms to address data dimensionality.
+    </p>
 
-    <br/>
-
-    <h2>PhD Dissertation (University of Michigan &ndash; Ann Arbor, 2015)</h2>
+    <h2>PhD Dissertation (University of Michigan, Ann Arbor)</h2>
     <ul>
-        <li>Scalable Machine Learning Methods for Massive Biomedical Data Analysis 
+        <li>"<b><i>Scalable Machine Learning Methods for Massive Biomedical Data Analysis</i></b>"
             
             [<a href=http://takwatanabe.me/pdf/thesis-final.pdf ><i class="fa fa-file-pdf-o" aria-hidden="true"></i> pdf</a>]
             
@@ -46,8 +26,8 @@
     </ul>
 
     {#- ===== From view-source:file:///C:/Users/takanori/Dropbox/webpage2016/html5up-alpha/index.html ===== -#}
-    <h2>Research Projects</h2>
-    <p>The following are some of the research projects I have worked on during my academic career.</p>
+    <h2>Research Projects and Portfolio</h2>
+    <p>Below are some of the research projects I have worked on during my academic career.</p>
 
     {% set fontsize = "20px" %}
     <div class="row">
@@ -56,11 +36,11 @@
             {# <section class="box special" style="{{height}}"> #}
             <section class="box special">
                 <span class="image featured"><img src={{file_url('img/research/snmf2.png')}} alt="" style="max-width: 100%;padding-bottom:30px; "/></span>
-                <h3>Discriminative Subnetwork Extraction using Supervised NMF</h3>
+                <h3>Discriminative Subnetwork Extraction using Supervised Non-negative Matrix Factorization</h3>
                 <hr>
                 <div style="text-align:left;">
                 <b>T. Watanabe</b>, B. Tunc, D. Parker, J. Kim, R. Verma,  
-                <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-46720-7_20">Label-Informed Non-negative Matrix Factorization with Manifold Regularization for Discriminative Subnetwork Detection
+                <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-46720-7_20">Label-Informed Non-negative Matrix Factorization with Manifold Regularization for Discriminative Subnetwork Detection</a>.
                 <em>Medical Image Computing and Computer-Assisted Intervention</em> 2016. 
                 </div>
                 <br/>
@@ -80,8 +60,19 @@
                 <span class="image featured"><img src={{file_url('img/research/pca_comp2.png')}} alt="" style="max-width: 105%;padding-bottom:0px; margin-left:-10px;"/></span>
                 <h3> Harmonization of inter-site Structural Connectivity Data</h3>
                 <hr>
+
+                <b>Work in progress &mdash; more to come!</b>
+                <br/>
+                (some preliminary experiments are posted on my <a href="http://takwatanabe.me/data_science/R/t_1104b_combat_pca.html">notebook page</a>)
+
+                <br/>
+                <br/>
+
                 <div style="text-align:center;">
-                <b>Details coming soon ...</b>
+                    <ul class="actions">
+                        <li><a href="research/intersite_connectome.html" class="button alt">Learn More</a></li>
+                    </ul>
+                </div>
             </section>
         </div>
     </div>
@@ -177,8 +168,29 @@
     </div>
 
 
-
+    
 
     <br/>
     {% include "_tests_/research_old.html" %}
+
+    <h2>Personal Coding Notes</h2>
+    <ul>
+        {% for url, name in [('data_science','Data science notebook'),
+                             ('snippets','Snippets notebook'),
+                             ('coding_notes','Coding notebook'),
+                             ('configs','Computer configuration notebook') ] %}
+            <li>
+                <strong>{{name}}</strong> (<a href="https://wtak23.github.io/{{url}}/" >link</a>)
+                [<a href="https://github.com/wtak23/{{url}}">Github source</a>]
+            </li>
+        {% endfor %}
+        <li><strong>Personal PySpark API</strong> (<a href="https://wtak23.github.io/pyspark/" >link</a>) &mdash; I created this since I found the <a href="http://spark.apache.org/docs/latest/api/python/index.html">official API</a> hard to navigate</li>
+        <li><strong>Interactive Charts with <a href="https://plot.ly/">Plotly</a></strong>
+            &mdash; some examples:
+            {% for item in [1,2,3] %}
+                [<a href="plotly{{item}}.html">Plotly-demo{{item}}</a>] &nbsp;
+            {% endfor %}
+        </li>
+        <li style="list-style:none;">See a more detailed version available at <a href="http://takwatanabe.me/data_science/" style="border-bottom: dotted 1px rgba(88, 88, 88, 0.0)"><span style="color:blue;">takwatanabe.me/data_science</span></a></li>
+    </ul>
 {%- endblock body -%}

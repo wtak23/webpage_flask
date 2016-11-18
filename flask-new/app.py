@@ -106,6 +106,10 @@ def generic():
 @app.route("/research.html")
 def research():
     return render_template('research.html',title="Research")
+@app.route("/portfolio.html")
+def portfolio():
+    # same as the research page
+    return render_template('research.html',title="Project Portfolio")
 
 @app.route("/research_draft.html")
 def research_draft():
@@ -150,6 +154,9 @@ def elements():
 def registration():
     return render_template('registration.html',title="Spatial Confidence Regions for Registration Uncertainty Analysis")
 
+@app.route("/research/intersite_connectome.html")
+def intersite_connectome():
+    return render_template('intersite_connectome.html',title="Harmonization of inter-site Structural Connectivity Data")
 
 @app.route("/research/supervised_nmf.html")
 def supervised_nmf():
